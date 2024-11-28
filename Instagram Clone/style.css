@@ -1,0 +1,8 @@
+:root{
+    --main-bg: black;
+    
+}
+
+.sidebar > .icons{
+    filter: invert(1);
+}
