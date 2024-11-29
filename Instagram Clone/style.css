@@ -1,173 +1,290 @@
-:root{
-    --main-bg: black;
-    --img-width: 50px;
-    --img-height: 50px;
-    --text-color: white;
-    
+:root {
+  --main-bg: black;
+  --img-width: 50px;
+  --img-height: 50px;
+  --text-color: white;
 }
+
 @font-face {
-    font-family:'fontspring_demo_-_blue_vinyBd';
-    src: url('fontspring-demo-blue_vinyl_bold_ps_ot-webfont.woff2') format('woff2'),
-         url('fontspring-demo-blue_vinyl_bold_ps_ot-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-img{
-    height: var(--img-height);
-    width:var(--img-width);
+  font-family: 'fontspring_demo_-_blue_vinyBd';
+  src: url('fontspring-demo-blue_vinyl_bold_ps_ot-webfont.woff2') format('woff2'),
+       url('fontspring-demo-blue_vinyl_bold_ps_ot-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
-.icons{
-    filter: invert(1);
+img {
+  height: var(--img-height);
+  width: var(--img-width);
 }
-html,body{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
+
+.icons {
+  filter: invert(1);
 }
-body{
-    display: flex;
-    flex-direction:column;
-    height: 100vh;
-    background-color: var(--main-bg);
-    color: var(--text-color);
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.con{
-    border: 1px solid rgb(255, 255, 255);
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--main-bg);
+  color: var(--text-color);
 }
-.header{
-   flex-grow: 1;
+
+.con {
+  border: 1px solid rgb(255, 255, 255);
 }
-.whole{
-    display: flex;
-    flex-direction: column;
-    
-    
+
+.header {
+  flex-grow: 1;
 }
-.header-container{
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    
+
+.whole {
+  display: flex;
+  flex-direction: column;
 }
-.header-container2{
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-    overflow-x: scroll;
-    flex-wrap: nowrap;
-    gap: 25px;
+
+.header-container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
 }
+
+.header-container2 {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  overflow-x: scroll;
+  flex-wrap: nowrap;
+  gap: 25px;
+}
+
 .header-container2::-webkit-scrollbar {
-    width: 0; /* Hide the scrollbar */
-  }
-  
-  .header-container2 {
-    -ms-overflow-style: none;  /* Hide scrollbar in Internet Explorer */
-    scrollbar-width: none;      /* Hide scrollbar in Firefox */
-  }
-.header-container2 > img{
-   
-    flex: 0 0 auto;
-}
-.header > h2{
-    font-family:'fontspring_demo_-_blue_vinyBd' ;
-}
-.main-content{
-    flex-grow: 5;
-}
-.footer{
-    flex-grow: 0.5;
-}
-.sidebar{
-    display:none;
+  width: 0; /* Hide the scrollbar */
 }
 
-.footer-container{
-    height: 100%;
+.header-container2 {
+  -ms-overflow-style: none; /* Hide scrollbar in Internet Explorer */
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+.header-container2 > img {
+  flex: 0 0 auto;
+}
+
+.header > h2 {
+  font-family: 'fontspring_demo_-_blue_vinyBd';
+}
+
+.main-content {
+  flex-grow: 5;
+}
+
+.footer {
+  flex-grow: 0.5;
+}
+
+.sidebar {
+  display: none;
+}
+
+.footer-container {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+  body {
+      display: grid;
+      grid-template-columns: 1fr 5fr;
+      grid-template-rows: 1fr;
+  }
+
+  .sidebar {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: start;
+      padding: 10px;
+      gap: 20px;
+  }
+
+  .img-flex {
+      display: flex;
+      gap: 15px;
+  }
+
+  .img-flex > p {
+      display: none;
+  }
+
+  .header, .footer {
+      display: none;
+  }
+}
+
+@media (min-width: 900px) {
+  body {
+      display: grid;
+      grid-template-columns: 1fr 5fr;
+      grid-template-rows: 1fr;
+  }
+
+  .sidebar {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: start;
+      padding: 10px;
+      gap: 20px;
+  }
+
+  .grid-main::-webkit-scrollbar {
+      width: 0; /* Hide the scrollbar */
+  }
+
+  .grid-main {
+      display: grid;
+      grid-template-columns: 1fr 3fr 3fr;
+      grid-template-rows: 1fr;
+      height: 100%;
+      overflow-y: scroll;
+      -ms-overflow-style: none; /* Hide scrollbar in Internet Explorer */
+      scrollbar-width: none; /* Hide scrollbar in Firefox */
+  }
+
+  .post-flex {
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+  }
+
+  .suggestionsFYP {
+      height: 35vh;
+      display: flex;
+      width: 100%; /* Ensure the width is constrained */
+      gap: 15px;
+      margin-bottom: 20px;
+      overflow-x: scroll; /* Enable scrolling */
+      flex-wrap: nowrap; /* Prevent wrapping */
+      -ms-overflow-style: none; /* Hide scrollbar in Internet Explorer */
+      scrollbar-width: none; /* Hide scrollbar in Firefox */
+  }
+
+  .suggestionsFYP::-webkit-scrollbar {
+      width: 0; /* Hide the scrollbar */
+  }
+
+  .suggestionsFYP > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 70%;
+      width: auto;
+      padding: 20px;
+      border: 1px solid white;
+      overflow: hidden;
+      flex-shrink: 0; /* Prevent shrinking */
+  }
+
+  .img-flex {
+      display: flex;
+      gap: 15px;
+  }
+
+  .suggest > .cancel {
+      text-align: right;
+  }
+
+  .emp {
+      height: 20vh;
+  }
+
+  .post-suggestions {
+      height: 45vh;
+  }
+
+  .posts {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      justify-content: space-evenly;
+      padding: 15px;
+      flex-wrap: nowrap;
+  }
+
+  .header, .footer {
+      display: none;
+  }
+
+  .post {
+      width: 100%;
+      max-width: 600px;
+      margin: 20px auto; /* Center posts */
+      border-radius: 8px;
+      overflow: hidden; /* Prevents content overflow */
+      display: flex;
+      flex-direction: column;
+  }
+
+  /* Post Header (Profile + Menu) */
+  .post-header {
+      display: flex;
+      justify-content: space-between; /* Space out profile and menu */
+      align-items: center;
+      padding: 10px;
+  }
+
+  .profile-pic {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%; /* Circular profile image */
+  }
+
+  .menu-dot {
+      font-size: 24px;
+      cursor: pointer;
+  }
+
+  /* Post Image */
+  .post-image {
+      width: 100%;
+      height: auto;
+      object-fit: cover; /* Ensures the image covers the area */
+  }
+
+  /* Post Caption */
+  .post p {
+      padding: 10px;
+      color: #333; /* Dark text for better readability */
+      font-size: 14px;
+      line-height: 1.6;
+  }
+
+
+  .suggestedFollows {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    height: 50vh;
+    justify-content: space-evenly;
     align-items: center;
-}
 
-@media (min-width: 600px) and (max-width:899px) {
-    body{
-        display: grid;
-        grid-template-columns: 1fr 5fr;
-        grid-template-rows: 1fr;
-    }
-   .sidebar{
+  }
+  .suggestedFollows > div{
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: start;
-    padding: 10px;
     gap: 20px;
-     
-   }
-   .img-flex{
-    display: flex;
-    gap: 15px;
+  }
 
-   }
-   .img-flex > p{
-    display: none;
-   }
-   .header, .footer{
-    display: none;
-   }
+
+  .grid-main > .profile > img{
+    margin-top: 35px;
+    margin-left: 70px;
+  }
 }
-
-
-@media (min-width: 900px ){
-    body{
-        display: grid;
-        grid-template-columns: 1fr 5fr;
-        grid-template-rows: 1fr;
-    }
-   .sidebar{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: start;
-    padding: 10px;
-    gap: 20px;
-     
-   }
-   .grid-main{
-    display: grid;
-    grid-template-columns: 1fr 3fr 3fr ;
-    grid-template-rows: 1fr;
-    height: 100%;
-
-   }
-
-   .grid-main > div{
-    border: 1px solid white;
-   }
-   .post-flex{
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-
-   }
-   .post-flex > div{
-    border: 1px solid white;
-   }
-   .emp{
-    flex-grow: 1;
-
-   }
-   .suggestionsFYP{flex-grow: 2;}
-   .post-suggestions{flex-grow:4;}
-   .img-flex{
-    display: flex;
-    gap: 15px;
-
-   }
-   .header, .footer{
-    display: none;
-   }
-}
-
