@@ -1,7 +1,7 @@
 :root {
   --main-bg: black;
-  --img-width: 50px;
-  --img-height: 50px;
+  --img-width: 32px;
+  --img-height: 32px;
   --text-color: white;
 }
 
@@ -16,6 +16,18 @@
 img {
   height: var(--img-height);
   width: var(--img-width);
+}
+
+.im{
+  border-radius: 50%;
+  overflow: hidden;
+  height: 100px;
+  width: 100px;
+}
+.im > img{
+  object-fit: cover;
+  height:100%;
+  width: 100%;
 }
 
 .icons {
@@ -36,9 +48,7 @@ body {
   color: var(--text-color);
 }
 
-.con {
-  border: 1px solid rgb(255, 255, 255);
-}
+
 
 .header {
   flex-grow: 1;
@@ -73,7 +83,7 @@ body {
   scrollbar-width: none; /* Hide scrollbar in Firefox */
 }
 
-.header-container2 > img {
+.header-container2 > div {
   flex: 0 0 auto;
 }
 
@@ -86,7 +96,8 @@ body {
 }
 
 .footer {
-  flex-grow: 0.5;
+  position:relative;
+  
 }
 
 .sidebar {
@@ -100,6 +111,72 @@ body {
   align-items: center;
 }
 
+.mainc.profile, .emp, .suggestionsFYP, .suggestedFollows{
+  display: none;
+}
+.posts {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-evenly;
+  padding: 15px;
+  flex-wrap: nowrap;
+}
+
+
+
+.post {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto; /* Center posts */
+  border-radius: 8px;
+  overflow: hidden; /* Prevents content overflow */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Post Header (Profile + Menu) */
+.post-header {
+  display: flex;
+  justify-content: space-between; /* Space out profile and menu */
+  align-items: center;
+  padding: 10px;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Circular profile image */
+}
+
+.menu-dot {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Post Image */
+.post-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensures the image covers the area */
+}
+
+/* Post Caption */
+.post p {
+  padding: 10px;
+  color: #ffffff; /* Dark text for better readability */
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+
+
+
+
+
+
+
 @media (min-width: 600px) and (max-width: 899px) {
   body {
       display: grid;
@@ -108,13 +185,17 @@ body {
   }
 
   .sidebar {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: start;
-      padding: 10px;
-      gap: 20px;
-  }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    
+    padding-left: 40px;
+    gap: 20px;
+   
+    height: 100%;
+    border: 1px solid rgba(245, 245, 245, 0.199);
+}
 
   .img-flex {
       display: flex;
@@ -130,6 +211,11 @@ body {
   }
 }
 
+
+
+
+
+
 @media (min-width: 900px) {
   body {
       display: grid;
@@ -140,10 +226,17 @@ body {
   .sidebar {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      align-items: start;
-      padding: 10px;
+      justify-content: space-evenly;
+      align-content: center;
+      
+      padding-left: 40px;
       gap: 20px;
+     
+      height: 100%;
+      border: 1px solid rgba(245, 245, 245, 0.199);
+  }
+  .mainc.profile{
+    display: block;
   }
 
   .grid-main::-webkit-scrollbar {
@@ -189,7 +282,7 @@ body {
       height: 70%;
       width: auto;
       padding: 20px;
-      border: 1px solid white;
+      border: 1px solid rgba(245, 245, 245, 0.199);
       overflow: hidden;
       flex-shrink: 0; /* Prevent shrinking */
   }
@@ -220,8 +313,11 @@ body {
       flex-wrap: nowrap;
   }
 
-  .header, .footer {
+  .header {
       display: none;
+  }
+  .con.post.footer{
+    display: none;
   }
 
   .post {
@@ -263,7 +359,7 @@ body {
   /* Post Caption */
   .post p {
       padding: 10px;
-      color: #333; /* Dark text for better readability */
+      color: #ffffff; /* Dark text for better readability */
       font-size: 14px;
       line-height: 1.6;
   }
