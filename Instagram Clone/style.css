@@ -324,8 +324,35 @@ img {
 
 
 }
+.search_input{
+  width:300px;
+  height: 30px;
+  border-radius: 10px;
+  margin-bottom: 20%;
+  background-color: rgb(68, 67, 67);
+  border: 1px solid black;
+  color: white;
 
-@media (min-width: 700px) and (max-width: 899px) {
+}
+
+.icons.magnify{
+  display: none;
+}
+
+@media (max-width:599px){
+  .search_input{
+    display: none;
+  }
+  .header-container{
+    margin-bottom: 15%;
+    
+  }
+  .icons.magnify{
+    display: inline-block;
+  }
+}
+
+@media(min-width: 781px) and (max-width: 1162px){
   body {
     display: grid;
     grid-template-columns: 10vw auto;
@@ -367,16 +394,106 @@ img {
     display: none;
   }
 
+  
+
   .header,
   .footer,
-  .suggestedFollows,
   .dash1 {
     display: none;
   }
 }
 
+@media (min-width: 1163px) and (max-width: 1266px) {
+  body {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 1fr;
+  }
 
-@media (min-width: 900px) {
+  .sidebar,
+  .suggestedFollows,
+  .emp,
+  .post-suggestions {
+    display: block;
+  }
+
+  .suggestionsFYP{
+    width: 60%;
+  }
+
+  .sidebar{
+    grid-column: 1/2;
+    padding-left: 0px;
+    padding-left: 20px;
+
+  }
+  .dash > a > .img-flex > p {
+    display: none;
+  }
+  .dash2 > a > div {
+    margin-bottom: 40px;
+  }
+  .dash3 > a > div {
+    margin-bottom: 40px;
+  }
+  .main-content{
+    grid-column: 2;
+  }
+  .post p {
+    font-size: 1.2rem;
+  }
+  .mainc.profile {
+    display: block;
+  }
+
+  .grid-main::-webkit-scrollbar {
+    display: none;
+    width: 0; 
+  }
+
+  .grid-main {
+    display: grid;
+    grid-template-columns:repeat(3,1fr) repeat(2,1fr) ;
+    grid-template-rows: 1fr;
+    height: 100%;
+    overflow-y: auto;
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+    /*border: 1px solid white;*/
+  }
+
+  
+  
+  
+  .mainc.profile{
+    grid-column: 2/3;
+    /*border: 1px solid white;*/
+  }
+  .mainc.posts{
+    grid-column: 3/4;
+    /*border: 1px solid white;*/
+  }
+  .mainc.suggestedFollows{
+    grid-column: 4;
+
+    /*border: 1px solid white;*/
+  }
+
+  .header {
+    display: none;
+  }
+  .con.post.footer {
+    display: none;
+  }
+
+  .grid-main > .profile > img {
+    margin-top: 35px;
+    margin-left: 70px;
+  }
+}
+
+
+@media (min-width: 1267px) {
   body {
     display: grid;
     grid-template-columns: repeat(5,1fr);
