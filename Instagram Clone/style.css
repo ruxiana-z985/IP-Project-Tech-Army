@@ -239,11 +239,14 @@ img {
   display: flex;
   width: 100%; /* Ensure the width is constrained */
   gap: 15px;
+  
   margin-bottom: 20px;
   overflow-x: scroll; /* Enable scrolling */
   flex-wrap: nowrap; /* Prevent wrapping */
   -ms-overflow-style: none; /* Hide scrollbar in Internet Explorer */
-  scrollbar-width: none; /* Hide scrollbar in Firefox */
+  scrollbar-width: none;
+  
+   /* Hide scrollbar in Firefox */
 }
 
 .suggestionsFYP::-webkit-scrollbar {
@@ -254,6 +257,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  
   height: 80%;
   width: auto;
   padding: 20px;
@@ -385,15 +389,30 @@ img {
     grid-template-columns: 1fr 3fr 3fr;
     grid-template-rows: 1fr;
     height: 100%;
-    overflow-y: scroll;
+    overflow-y: auto;
     -ms-overflow-style: none; /* Hide scrollbar in Internet Explorer */
     scrollbar-width: none; /* Hide scrollbar in Firefox */
   }
-
+  
   .post-flex {
     display: flex;
     height: 100%;
     flex-direction: column;
+    -ms-overflow-style: none; /* Hide scrollbar in Internet Explorer */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    
+  }
+  .post-flex::-webkit-scrollbar {
+    width: 0; /* Hide the scrollbar */
+  }
+  .mainc.profile{
+    grid-column: 2/3;
+  }
+  .mainc.posts{
+    grid-column: 3/4;
+  }
+  .mainc.suggestedFollows{
+    grid-column: 4;
   }
 
   .header {
