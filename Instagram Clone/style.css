@@ -18,9 +18,10 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-/*::-webkit-scrollbar {
-  width: 0;
-}*/
+::-webkit-scrollbar {
+  width: 5px;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -237,7 +238,7 @@ img {
 .suggestionsFYP {
   height: auto;
   display: flex;
-  width: 90%; 
+  width: 100%; 
   gap: 15px;
   justify-content: center;
   overflow-x: scroll; 
@@ -348,7 +349,7 @@ img {
 
   .suggestionsFYP {
     grid-column: 2;
-    width: 80%;
+    width: 60%;
   
   }
 
