@@ -1,28 +1,23 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
   --main-bg: black;
   --img-width: 32px;
   --img-height: 32px;
   --text-color: white;
-  
+
   --font-family: "Poppins", sans-serif;
   --font-weight: 400;
   --font-style: normal;
-  }
-  
-
-
-
+}
 
 /*BASIC STYLES*/
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 
 body {
   display: flex;
@@ -31,21 +26,16 @@ body {
   background-color: var(--main-bg);
   color: var(--text-color);
   font-family: var(--font-family);
-  font-weight:var(--font-weight) ;
+  font-weight: var(--font-weight);
   font-style: var(--font-style);
 }
 .icons {
   filter: invert(1);
 }
-a{
+a {
   text-decoration: none;
-  color:inherit;
+  color: inherit;
 }
-
-
-
-
-
 
 /*HEADER*/
 .header {
@@ -62,7 +52,7 @@ a{
   display: flex;
   justify-content: space-between;
 }
-.imgs > img{
+.imgs > img {
   margin-right: 30px;
   margin-top: 20px;
 }
@@ -82,11 +72,11 @@ a{
   width: 0; /* Hide the scrollbar */
 }
 
-
 .header-container2 > div {
   flex: 0 0 auto;
 }
-.im, .suggestion-pic{
+.im,
+.suggestion-pic {
   border-radius: 50%;
   overflow: hidden;
   height: 100px;
@@ -94,18 +84,12 @@ a{
   border: 3px solid rgb(117, 82, 97);
   cursor: pointer;
 }
-.im > img, .suggestion-pic > img{
+.im > img,
+.suggestion-pic > img {
   object-fit: cover;
-  height:100%;
+  height: 100%;
   width: 100%;
-
 }
-
-
-
-
-
-
 
 /*SIDEBAR*/
 
@@ -122,21 +106,19 @@ a{
   height: 100%;
   border-right: 1px solid rgba(245, 245, 245, 0.199);
 }
-.sidebar > div{
+.sidebar > div {
   margin-bottom: 80px;
-
 }
-.dash > a > div{
+.dash > a > div {
   border-radius: 10px;
   text-align: center;
   padding: 1px;
   cursor: pointer;
-
 }
-.dash > a > div:hover{
+.dash > a > div:hover {
   background-color: rgba(128, 128, 128, 0.21);
 }
-.dash2 > div{
+.dash2 > div {
   margin-bottom: 10px;
 }
 .img-flex {
@@ -148,18 +130,6 @@ img {
   width: var(--img-width);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 /*MAIN CONTENT STYLE*/
 
 .main-content {
@@ -167,8 +137,7 @@ img {
 }
 
 .footer {
-  position:relative;
-  
+  position: relative;
 }
 
 .sidebar {
@@ -182,7 +151,6 @@ img {
   align-items: center;
 }
 
-
 .posts {
   display: flex;
   flex-direction: column;
@@ -191,8 +159,6 @@ img {
   padding: 15px;
   flex-wrap: nowrap;
 }
-
-
 
 .post {
   width: 100%;
@@ -212,7 +178,8 @@ img {
   padding: 10px;
 }
 
-.profile-pic, .mainc.profile > img {
+.profile-pic,
+.mainc.profile > img {
   width: 60px;
   height: 60px;
   border-radius: 50%; /* Circular profile image */
@@ -229,11 +196,9 @@ img {
   width: 100%;
   height: auto;
   object-fit: cover; /* Ensures the image covers the area */
-  border-top: 1px solid  rgba(245, 245, 245, 0.199);
-  border-bottom: 1px solid  rgba(245, 245, 245, 0.199);
+  border-top: 1px solid rgba(245, 245, 245, 0.199);
+  border-bottom: 1px solid rgba(245, 245, 245, 0.199);
   border-radius: 10px;
-  
-
 }
 
 /* Post Caption */
@@ -244,17 +209,18 @@ img {
   line-height: 1.6;
 }
 
-.like{
+.like {
   display: flex;
   justify-content: space-between;
-
 }
-.like-left > img, .like-right > img{
+.like-left > img,
+.like-right > img {
   margin-top: 10px;
   margin-right: 20px;
   filter: invert(1);
 }
-.like-left > svg, .like-right > svg{
+.like-left > svg,
+.like-right > svg {
   margin-top: 10px;
   margin-right: 20px;
 }
@@ -266,7 +232,6 @@ img {
 .post-suggestions {
   height: 45vh;
 }
-
 
 /*the suggestion boxes on your FYP*/
 .suggestionsFYP {
@@ -299,15 +264,14 @@ img {
 .suggest > .cancel {
   text-align: right;
 }
-.suggest > div:not(.cancel):not(.suggestion-pic){
+.suggest > div:not(.cancel):not(.suggestion-pic) {
   border-top: 1px solid whitesmoke;
-  text-align: center ;
+  text-align: center;
   align-content: center;
   height: auto;
   width: 100%;
   color: blue;
 }
-
 
 /*SUGGESTED FOLLOWS*/
 .suggestedFollows {
@@ -318,152 +282,128 @@ img {
   align-items: center;
   padding-top: 35px;
   margin-left: 100px;
-  
 }
-.suggestedFollows > div{
+.suggestedFollows > div {
   display: flex;
   gap: 20px;
 }
-.suggestedFollows > .img-flex > img{
+.suggestedFollows > .img-flex > img {
   border-radius: 50%;
   height: 70px;
   width: 70px;
   margin-bottom: 30px;
   object-fit: cover;
 }
-.suggestedFollows > .img-flex > img:not(.icon){
+.suggestedFollows > .img-flex > img:not(.icon) {
   height: 20px;
   width: 20px;
   margin-top: 15px;
 }
 
-
-
 /*NON-DISPLAYABLES FOR MOBILE LAYOUT*/
-.mainc.profile, .emp, .suggestedFollows{
+.mainc.profile,
+.emp,
+.suggestedFollows {
   display: none;
 }
-
-
-
-
-
-
 
 /* MEDIA QUERIES FOR TABLETS AND SMALLER DESKTOPS*/
 
 @media (min-width: 700px) and (max-width: 899px) {
   body {
-      display: grid;
-      grid-template-columns: 10vw auto ;
-      grid-template-rows: 1fr;
-      
+    display: grid;
+    grid-template-columns: 10vw auto;
+    grid-template-rows: 1fr;
   }
-  .sidebar{
+  .sidebar {
     display: block;
     padding-left: 0px;
     padding-left: 20px;
-  
-    }
-
-    .main-content::-webkit-scrollbar {
-      width: 0; /* Hide the scrollbar */
   }
-    .main-content{
-      overflow-y: scroll;
-      -ms-overflow-style: none; /* Hide scrollbar in Internet Explorer */
-      scrollbar-width: none; /* Hide scrollbar in Firefox */
-    }
-  
-   .suggestionsFYP{
-     grid-column: 2;
-   }
 
-  
-  .dash2 > div{
+  .main-content::-webkit-scrollbar {
+    width: 0; /* Hide the scrollbar */
+  }
+  .main-content {
+    overflow-y: scroll;
+    -ms-overflow-style: none; /* Hide scrollbar in Internet Explorer */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+  }
+
+  .suggestionsFYP {
+    grid-column: 2;
+  }
+
+  .dash2 > div {
     margin-bottom: 40px;
   }
-  .dash3 > div{
+  .dash3 > div {
     margin-bottom: 40px;
   }
-  .post p{
+  .post p {
     font-size: 1.1rem;
   }
-  
 
   .img-flex > p {
-      display: none;
+    display: none;
   }
 
-  .header, .footer, .suggestedFollows, .dash1 {
-      display: none;
+  .header,
+  .footer,
+  .suggestedFollows,
+  .dash1 {
+    display: none;
   }
 }
 
-
-
-
-
-
-
-
-
 @media (min-width: 900px) {
   body {
-      display: grid;
-      grid-template-columns: 1fr 5fr;
-      grid-template-rows: 1fr;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr;
   }
 
-  
   .sidebar,
   .suggestedFollows,
   .emp,
-  .post-suggestions{
+  .post-suggestions {
     display: block;
   }
-  .post p{
+  .post p {
     font-size: 1.2rem;
   }
-  .mainc.profile{
+  .mainc.profile {
     display: block;
   }
 
   .grid-main::-webkit-scrollbar {
-      width: 0; /* Hide the scrollbar */
+    width: 0; /* Hide the scrollbar */
   }
 
   .grid-main {
-      display: grid;
-      grid-template-columns: 1fr 3fr 3fr;
-      grid-template-rows: 1fr;
-      height: 100%;
-      overflow-y: scroll;
-      -ms-overflow-style: none; /* Hide scrollbar in Internet Explorer */
-      scrollbar-width: none; /* Hide scrollbar in Firefox */
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr;
+    grid-template-rows: 1fr;
+    height: 100%;
+    overflow-y: scroll;
+    -ms-overflow-style: none; /* Hide scrollbar in Internet Explorer */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
   }
 
   .post-flex {
-      display: flex;
-      height: 100%;
-      flex-direction: column;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
   }
-
-  
-  
 
   .header {
-      display: none;
-  }
-  .con.post.footer{
     display: none;
   }
-   
+  .con.post.footer {
+    display: none;
+  }
 
-
-
-
-  .grid-main > .profile > img{
+  .grid-main > .profile > img {
     margin-top: 35px;
     margin-left: 70px;
   }
