@@ -11,18 +11,20 @@
   --font-style: normal;
 }
 
-/*BASIC STYLES*/
+
 html,
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+/*::-webkit-scrollbar {
+  width: 0;
+}*/
 body {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--main-bg);
   color: var(--text-color);
   font-family: var(--font-family);
@@ -37,7 +39,7 @@ a {
   color: inherit;
 }
 
-/*HEADER*/
+
 .header {
   flex-grow: 1;
 }
@@ -62,14 +64,14 @@ a {
   display: flex;
   justify-content: space-around;
   overflow-x: scroll;
-  -ms-overflow-style: none; /* Hide scrollbar in Internet Explorer */
-  scrollbar-width: none; /* Hide scrollbar in Firefox */
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
   flex-wrap: nowrap;
   gap: 25px;
 }
 
 .header-container2::-webkit-scrollbar {
-  width: 0; /* Hide the scrollbar */
+  width: 0;
 }
 
 .header-container2 > div {
@@ -91,7 +93,6 @@ a {
   width: 100%;
 }
 
-/*SIDEBAR*/
 
 .sidebar {
   display: flex;
@@ -128,10 +129,11 @@ img {
   width: var(--img-width);
 }
 
-/*MAIN CONTENT STYLE*/
+
 
 .main-content {
   flex-grow: 5;
+  /*border: 1px solid white;*/
 }
 
 .footer {
@@ -161,17 +163,17 @@ img {
 .post {
   width: 100%;
   max-width: 600px;
-  margin: 20px auto; /* Center posts */
+  margin: 20px auto; 
   border-radius: 8px;
-  overflow: hidden; /* Prevents content overflow */
+  overflow: hidden; 
   display: flex;
   flex-direction: column;
 }
 
-/* Post Header (Profile + Menu) */
+
 .post-header {
   display: flex;
-  justify-content: space-between; /* Space out profile and menu */
+  justify-content: space-between; 
   align-items: center;
   padding: 10px;
 }
@@ -180,7 +182,7 @@ img {
 .mainc.profile > img {
   width: 60px;
   height: 60px;
-  border-radius: 50%; /* Circular profile image */
+  border-radius: 50%; 
   cursor: pointer;
 }
 
@@ -189,20 +191,20 @@ img {
   cursor: pointer;
 }
 
-/* Post Image */
+
 .post-image {
   width: 100%;
   height: auto;
-  object-fit: cover; /* Ensures the image covers the area */
+  object-fit: cover; 
   border-top: 1px solid rgba(245, 245, 245, 0.199);
   border-bottom: 1px solid rgba(245, 245, 245, 0.199);
   border-radius: 10px;
 }
 
-/* Post Caption */
+
 .post p {
   padding: 10px;
-  color: #ffffff; /* Dark text for better readability */
+  color: #ffffff; 
   font-size: 1rem;
   line-height: 1.6;
 }
@@ -231,24 +233,26 @@ img {
   height: 45vh;
 }
 
-/*the suggestion boxes on your FYP*/
+
 .suggestionsFYP {
-  height: 35vh;
+  height: auto;
   display: flex;
-  width: 100%; /* Ensure the width is constrained */
+  width: 90%; 
   gap: 15px;
-  
-  margin-bottom: 20px;
-  overflow-x: scroll; /* Enable scrolling */
-  flex-wrap: nowrap; /* Prevent wrapping */
-  -ms-overflow-style: none; /* Hide scrollbar in Internet Explorer */
+  justify-content: center;
+  overflow-x: scroll; 
+  flex-wrap: nowrap; 
+  -ms-overflow-style: none;
   scrollbar-width: none;
+  /*border: 1px solid white;*/
   
-   /* Hide scrollbar in Firefox */
+  
+
 }
 
 .suggestionsFYP::-webkit-scrollbar {
-  width: 0; /* Hide the scrollbar */
+  
+  width: 0; 
 }
 
 .suggestionsFYP > div {
@@ -261,7 +265,7 @@ img {
   padding: 20px;
   border: 1px solid rgba(245, 245, 245, 0.199);
   overflow: hidden;
-  flex-shrink: 0; /* Prevent shrinking */
+  flex-shrink: 0; 
 }
 .suggest > .cancel {
   text-align: right;
@@ -275,15 +279,17 @@ img {
   color: blue;
 }
 
-/*SUGGESTED FOLLOWS*/
+
 .suggestedFollows {
   display: flex;
   flex-direction: column;
-  height: 50vh;
+  height: 60vh;
   justify-content: space-evenly;
   align-items: center;
-  padding-top: 35px;
-  margin-left: 100px;
+  padding-top: 60px;
+  padding-right: 100px;
+  /*border: 1px solid wheat;*/
+
 }
 .suggestedFollows > div {
   display: flex;
@@ -302,14 +308,21 @@ img {
   margin-top: 15px;
 }
 
-/*NON-DISPLAYABLES FOR MOBILE LAYOUT*/
 .mainc.profile,
 .emp,
 .suggestedFollows {
   display: none;
 }
 
-/* MEDIA QUERIES FOR TABLETS AND SMALLER DESKTOPS*/
+.post-flex{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding-top: 50px;
+
+
+}
 
 @media (min-width: 700px) and (max-width: 899px) {
   body {
@@ -324,22 +337,25 @@ img {
   }
 
   .main-content::-webkit-scrollbar {
-    width: 0; /* Hide the scrollbar */
+    display: none;
+    width: 0; 
   }
   .main-content {
     overflow-y: scroll;
-    -ms-overflow-style: none; /* Hide scrollbar in Internet Explorer */
-    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
   }
 
   .suggestionsFYP {
     grid-column: 2;
+    width: 80%;
+  
   }
 
-  .dash2 > div {
+  .dash2 > a > div {
     margin-bottom: 40px;
   }
-  .dash3 > div {
+  .dash3 > a > div {
     margin-bottom: 40px;
   }
   .post p {
@@ -358,10 +374,11 @@ img {
   }
 }
 
+
 @media (min-width: 900px) {
   body {
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: repeat(5,1fr);
     grid-template-rows: 1fr;
   }
 
@@ -371,6 +388,18 @@ img {
   .post-suggestions {
     display: block;
   }
+
+  .suggestionsFYP{
+    width: 60%;
+  }
+
+  .sidebar{
+    grid-column: 1/2;
+  }
+
+  .main-content{
+    grid-column: 2;
+  }
   .post p {
     font-size: 1.2rem;
   }
@@ -379,38 +408,36 @@ img {
   }
 
   .grid-main::-webkit-scrollbar {
-    width: 0; /* Hide the scrollbar */
+    display: none;
+    width: 0; 
   }
 
   .grid-main {
     display: grid;
-    grid-template-columns: 1fr 3fr 3fr;
+    grid-template-columns:repeat(3,1fr) repeat(2,1fr) ;
     grid-template-rows: 1fr;
     height: 100%;
     overflow-y: auto;
-    -ms-overflow-style: none; /* Hide scrollbar in Internet Explorer */
-    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+    /*border: 1px solid white;*/
   }
+
   
-  .post-flex {
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    -ms-overflow-style: none; /* Hide scrollbar in Internet Explorer */
-    scrollbar-width: none; /* Hide scrollbar in Firefox */
-    
-  }
-  .post-flex::-webkit-scrollbar {
-    width: 0; /* Hide the scrollbar */
-  }
+  
+  
   .mainc.profile{
     grid-column: 2/3;
+    /*border: 1px solid white;*/
   }
   .mainc.posts{
     grid-column: 3/4;
+    /*border: 1px solid white;*/
   }
   .mainc.suggestedFollows{
     grid-column: 4;
+
+    /*border: 1px solid white;*/
   }
 
   .header {
