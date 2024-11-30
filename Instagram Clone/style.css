@@ -334,10 +334,10 @@ img {
     grid-column: 2;
   }
 
-  .dash2 > div {
+  .dash2 > a > div {
     margin-bottom: 40px;
   }
-  .dash3 > div {
+  .dash3 > a > div {
     margin-bottom: 40px;
   }
   .post p {
