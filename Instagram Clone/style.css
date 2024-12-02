@@ -397,6 +397,11 @@ dialog {
   margin-left: 20%;
 }
 
+.emp > p{
+  font-size: 1.3rem;
+ 
+  margin-top: 40%;
+}
 
 
 @media (max-width:599px){

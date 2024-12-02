@@ -1,3 +1,11 @@
+//FRONT PAGE LOADER
+if (!sessionStorage.getItem('visited')) {
+    // If it's the first time, redirect to load.html
+    sessionStorage.setItem('visited', 'true');
+    window.location.href = 'loading_page/load.html';
+  }
+
+//HEART 
 const hearts = document.querySelectorAll(".heart-icon");
 
 hearts.forEach(heart => {
@@ -13,6 +21,11 @@ hearts.forEach(heart => {
         }
     });
 });
+
+
+//CREATE POST FUNCTIONALITY
+
+
 const dialog=document.getElementById("dialog");
 const create=document.querySelectorAll(".create");
 const dialog_cancel=document.querySelector(".dialog-cancel");
@@ -35,3 +48,6 @@ dialog.addEventListener('click', (event) => {
 dialog_cancel.addEventListener("click", function(){
     dialog.close();
 });
+
+
+
