@@ -13,3 +13,25 @@ hearts.forEach(heart => {
         }
     });
 });
+const dialog=document.getElementById("dialog");
+const create=document.querySelectorAll(".create");
+const dialog_cancel=document.querySelector(".dialog-cancel");
+const dialogFlex = document.querySelector('.dialog-flex');
+
+create.forEach(element => {
+    element.addEventListener("click",function(){
+    dialog.showModal();
+});
+});
+
+
+//event is an object passed to function and contains details about what was clicked
+dialog.addEventListener('click', (event) => {
+    // Check if the click is outside `.dialog-flex`
+    if (!dialogFlex.contains(event.target)) {
+      dialog.close(); // Close the dialog
+    }
+  });
+dialog_cancel.addEventListener("click", function(){
+    dialog.close();
+});
