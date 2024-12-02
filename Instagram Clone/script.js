@@ -66,3 +66,49 @@ fyp.addEventListener("click", function(event){
         }
     }
  });
+
+
+ //NOTIFICATION PAGE DISPLAY
+
+ const notification = document.getElementById("notification");
+const notify = document.querySelector(".side-notification");
+const sidebar = document.querySelector(".con.sidebar");
+const notification_icon=document.querySelector(".side-heart");
+
+const path=notification_icon.querySelector("path");
+
+notification.addEventListener("click", function () {
+    const isNotificationVisible = notify.style.display === "flex";
+    
+    if (isNotificationVisible) {
+      // Hide the notification
+      notify.style.display = "none";
+      path.setAttribute("fill", "none");
+      path.setAttribute("stroke", "white");
+       
+    } else {
+      // Show the notification
+      notify.style.display = "flex";
+    
+        // Toggle the fill attribute between "red" and "none"
+        
+        
+            path.setAttribute("fill", "white");
+            path.setAttribute("stroke","none");
+            
+
+        
+
+    }
+  });
+
+  document.addEventListener("click", function (event) {
+    // Check if the click is outside of the notification or notification toggle button
+    if (!notify.contains(event.target) && !notification.contains(event.target)) {
+      // Hide the notification if the click is outside
+      notify.style.display = "none";
+      path.setAttribute("fill", "none");
+      path.setAttribute("stroke", "white");
+       
+    }
+  });

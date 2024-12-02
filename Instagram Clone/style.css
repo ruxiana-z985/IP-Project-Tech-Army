@@ -99,6 +99,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+ 
   padding-top: 20px;
   padding-left: 40px;
   padding-bottom: 20px;
@@ -130,7 +131,28 @@ img {
   width: var(--img-width);
 }
 
+.sidebar {
+  position: relative; /* Set the sidebar as the reference point */
+  z-index: 1; /* Lower layer */
+}
 
+.side-notification {
+  display: none; /* Hidden by default */
+  position: absolute; /* Overlay the sidebar */
+  top: 0; /* Align with the top of the sidebar */
+  left: 0; /* Align with the left of the sidebar */
+  width: 40%; /* Match the sidebar's width */
+  height: 100%; /* Match the sidebar's height */
+  background-color: rgb(0, 0, 0); /* Semi-transparent background for visibility */
+  z-index: 2; /* Higher layer to appear on top */
+  padding: 20px; /* Optional padding */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional shadow for effect */
+}
+
+.side-notification{
+  margin-left: 5%;
+  display: none;
+}
 
 .main-content {
   flex-grow: 5;
@@ -138,9 +160,9 @@ img {
   /*border: 1px solid white;*/
 }
 
-.footer {
+/*.footer {
   position: relative;
-}
+}*/
 
 .sidebar {
   display: none;
@@ -585,7 +607,7 @@ dialog {
     width: 700px;
   }
 
-  .sidebar{
+  .sidebar, .side-notification{
     grid-column: 1/2;
   }
 
