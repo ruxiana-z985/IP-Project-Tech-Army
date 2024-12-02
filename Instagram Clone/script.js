@@ -1,3 +1,4 @@
+
 //FRONT PAGE LOADER
 if (!sessionStorage.getItem('visited')) {
     // If it's the first time, redirect to load.html
@@ -5,7 +6,13 @@ if (!sessionStorage.getItem('visited')) {
     window.location.href = 'loading_page/load.html';
   }
 
-//HEART 
+
+
+
+
+
+
+//HEART/LIKE OR UNLIKE FUNCTIONALITY  
 const hearts = document.querySelectorAll(".heart-icon");
 
 hearts.forEach(heart => {
@@ -27,6 +34,10 @@ hearts.forEach(heart => {
 });
 
 
+
+
+
+
 //CREATE POST FUNCTIONALITY
 
 
@@ -43,9 +54,9 @@ create.forEach(element => {
 
 
 //event is an object passed to function and contains details about what was clicked
-dialog.addEventListener('click', (event) => {
+document.addEventListener('click', (event) => {
     // Check if the click is outside `.dialog-flex`
-    if (!dialogFlex.contains(event.target)) {
+    if (!dialogFlex.contains(event.target) && !create.contains(event.target)) {
       dialog.close(); // Close the dialog
     }
   });
@@ -53,7 +64,12 @@ dialog_cancel.addEventListener("click", function(){
     dialog.close();
 });
 
-//REMOVE SUGGESTED PROFILES
+
+
+
+
+
+//REMOVE SUGGESTED PROFILES FUNCTIONALITY
 const fyp=document.querySelector(".suggestionsFYP");
 
 fyp.addEventListener("click", function(event){
@@ -66,6 +82,9 @@ fyp.addEventListener("click", function(event){
         }
     }
  });
+
+ 
+
 
 
  //NOTIFICATION PAGE DISPLAY
@@ -112,3 +131,8 @@ notification.addEventListener("click", function () {
        
     }
   });
+
+
+  //SEARCH PAGE DISPLAY
+
+  //MORE PAGE DISPLAY
