@@ -133,25 +133,69 @@ img {
 
 .sidebar {
   position: relative; /* Set the sidebar as the reference point */
-  z-index: 1; /* Lower layer */
+  /*z-index: 1; /* Lower layer */
 }
 
 .side-notification {
-  display: none; /* Hidden by default */
-  position: absolute; /* Overlay the sidebar */
-  top: 0; /* Align with the top of the sidebar */
-  left: 0; /* Align with the left of the sidebar */
-  width: 40%; /* Match the sidebar's width */
-  height: 100%; /* Match the sidebar's height */
-  background-color: rgb(0, 0, 0); /* Semi-transparent background for visibility */
-  z-index: 2; /* Higher layer to appear on top */
-  padding: 20px; /* Optional padding */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional shadow for effect */
-}
-
-.side-notification{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; /* Ensures it extends fully to the right */
+  bottom: 0;
+  width: 40%;
+  background-color: rgb(0, 0, 0);
+  z-index: 2;
   margin-left: 5%;
   display: none;
+  padding-left: 7%;
+  overflow-y: scroll; /* Add scrolling if content exceeds the height */
+ 
+}
+.side-notification::-webkit-scrollbar{
+  width: 12px;
+}
+
+.side-notification > p {
+  text-align: left;
+  color: white; /* Added color for visibility */
+}
+
+.notification-suggestions {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  
+}
+
+.notification-suggestions > div {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start; /* Adjust to space out items */
+  margin-left: 5%;
+  gap: 30%;
+  margin-bottom: 15px; /* Add margin for spacing between items */
+}
+
+.notification-suggestions > div > img {
+  border-radius: 50%; /* Makes the images round */
+  height: 50px; /* Set a fixed size */
+  width: 50px;  /* Set a fixed size */
+}
+
+.notification-suggestions > div > button {
+  padding: 8px 16px; /* Add some padding to buttons */
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.notification-suggestions > div > button:hover {
+  background-color: #0056b3;
 }
 
 .main-content {
