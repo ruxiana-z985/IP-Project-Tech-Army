@@ -134,6 +134,7 @@ img {
 
 .main-content {
   flex-grow: 5;
+  flex-shrink: 0;
   /*border: 1px solid white;*/
 }
 
@@ -245,14 +246,12 @@ img {
   flex-wrap: nowrap; 
   -ms-overflow-style: none;
   scrollbar-width: none;
-  /*border: 1px solid white;*/
-  
-  
-
+  flex-shrink: 0; /* Prevent shrinking */
+  /* Added width and flex-grow to maintain space */
+  flex-grow: 0;
 }
 
 .suggestionsFYP::-webkit-scrollbar {
-  
   width: 0; 
 }
 
@@ -260,14 +259,14 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  
   height: 80%;
   width: auto;
   padding: 20px;
   border: 1px solid rgba(245, 245, 245, 0.199);
   overflow: hidden;
-  flex-shrink: 0; 
+  flex-shrink: 0; /* Prevent shrinking of individual suggestion items */
 }
+
 .suggest > .cancel {
   text-align: right;
 }
@@ -403,7 +402,9 @@ dialog {
   margin-top: 40%;
 }
 
-
+.footer > .footer-container > .create{
+  cursor: pointer;
+}
 @media (max-width:599px){
   .search_input{
     display: none;
@@ -420,7 +421,7 @@ dialog {
 @media(min-width: 781px) and (max-width: 1162px){
   body {
     display: grid;
-    grid-template-columns: 10vw auto;
+    grid-template-columns: 10vw 90vw;
     grid-template-rows: 1fr;
    
   }
@@ -442,7 +443,7 @@ dialog {
 
   .suggestionsFYP {
     grid-column: 2;
-    width: 60%;
+    width: 500px;
   
   }
 
@@ -487,7 +488,7 @@ dialog {
   }
 
   .suggestionsFYP{
-    width: 60%;
+    width: 600px;
   }
 
   .sidebar{
@@ -523,7 +524,7 @@ dialog {
 
   .grid-main {
     display: grid;
-    grid-template-columns:repeat(3,1fr) ;
+    grid-template-columns:2fr 3fr ;
     grid-template-rows: 1fr;
     height: 100%;
     
@@ -538,14 +539,7 @@ dialog {
   
   
   
-  .mainc.profile{
-    grid-column: 1/2;
-    /*border: 1px solid white;*/
-  }
-  .mainc.posts{
-    grid-column: 2/3;
-    /*border: 1px solid white;*/
-  }
+  
   .mainc.suggestedFollows{
     grid-column: 3;
 
@@ -570,10 +564,13 @@ dialog {
 }
 
 
+
+
+
 @media (min-width: 1267px) {
   body {
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: 15vw 2fr 1fr;
     grid-template-rows: 1fr;
   }
 
@@ -585,7 +582,7 @@ dialog {
   }
 
   .suggestionsFYP{
-    width: 60%;
+    width: 700px;
   }
 
   .sidebar{
@@ -593,7 +590,7 @@ dialog {
   }
 
   .main-content{
-    grid-column: 2;
+    grid-column: 2/3;
   }
   .post p {
     font-size: 1.2rem;
@@ -609,7 +606,7 @@ dialog {
 
   .grid-main {
     display: grid;
-    grid-template-columns:repeat(3,1fr) repeat(2,1fr) ;
+    grid-template-columns:1fr 3fr ;
     grid-template-rows: 1fr;
     height: 100%;
     overflow-y: auto;
@@ -619,22 +616,12 @@ dialog {
   }
 
   
-  
-  
-  .mainc.profile{
-    grid-column: 2/3;
-    /*border: 1px solid white;*/
-  }
-  .mainc.posts{
-    grid-column: 3/4;
-    /*border: 1px solid white;*/
-  }
   .mainc.suggestedFollows{
-    grid-column: 4;
+    grid-column: 3;
 
-    /*border: 1px solid white;*/
+   
   }
-
+  
   .header {
     display: none;
   }
