@@ -1,682 +1,191 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-:root {
-  --main-bg: black;
-  --img-width: 32px;
-  --img-height: 32px;
-  --text-color: white;
-
-  --font-family: "Poppins", sans-serif;
-  --font-weight: 400;
-  --font-style: normal;
+html,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+}
+.icons{
+  filter:invert(1);
+  height:35px;
+  width:35px;
+}
+main.main{
+    display: flex;
+    max-width:60vw;
+    
+   
 }
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-::-webkit-scrollbar {
-  width: 5px;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background-color: var(--main-bg);
-  color: var(--text-color);
-  font-family: var(--font-family);
-  font-weight: var(--font-weight);
-  font-style: var(--font-style);
-}
-.icons {
-  filter: invert(1);
-}
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.header {
-  flex-grow: 1;
-}
-
-.whole {
-  display: flex;
-  flex-direction: column;
-}
-
-.header-container {
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-.imgs > img {
-  margin-right: 30px;
-  margin-top: 20px;
-}
-
-.header-container2 {
-  height: 100%;
-  display: flex;
-  justify-content: space-around;
-  overflow-x: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  flex-wrap: nowrap;
-  gap: 25px;
-}
-
-.header-container2::-webkit-scrollbar {
-  width: 0;
-}
-
-.header-container2 > div {
-  flex: 0 0 auto;
-}
-.im,
-.suggestion-pic {
-  border-radius: 50%;
-  overflow: hidden;
-  height: 100px;
-  width: 100px;
-  border: 3px solid rgb(117, 82, 97);
-  cursor: pointer;
-}
-.im > img,
-.suggestion-pic > img {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-}
-
-.sidebar {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-
-  padding-top: 20px;
-  padding-left: 40px;
-  padding-bottom: 20px;
-  gap: 20px;
-  height: 100%;
-  border: 1px solid rgba(245, 245, 245, 0.199);
-}
-.sidebar > div {
-  margin-bottom: 80px;
-}
-.dash > a > div {
-  border-radius: 10px;
-  text-align: center;
-  padding: 1px;
-  cursor: pointer;
-}
-.dash > a > div:hover {
-  background-color: rgba(128, 128, 128, 0.21);
-}
-.dash2 > div {
-  margin-bottom: 10px;
-}
-.img-flex {
-  display: flex;
-  gap: 15px;
-}
-img {
-  height: var(--img-height);
-  width: var(--img-width);
-}
-
-.sidebar {
-  position: relative; /* Set the sidebar as the reference point */
-  /*z-index: 1; /* Lower layer */
-}
-
-.side-notification {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0; /* Ensures it extends fully to the right */
-  bottom: 0;
-  width: 25%;
-  background-color: rgb(0, 0, 0);
-  z-index: 2;
-  margin-left: 5%;
-  display: none;
-  padding-left: 7%;
-  overflow-y: scroll; /* Add scrolling if content exceeds the height */
-}
-.side-notification::-webkit-scrollbar {
-  width: 12px;
-}
-
-.side-notification > p {
-  text-align: left;
-  color: white; /* Added color for visibility */
-}
-
-.notification-suggestions {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.notification-suggestions > div {
-  width: 60%;
-  display: flex;
-  justify-content: flex-start; /* Adjust to space out items */
-  gap: 5%;
-  margin-bottom: 15px; /* Add margin for spacing between items */
-}
-
-.notification-suggestions > div > img {
-  border-radius: 50%; /* Makes the images round */
-  height: 50px; /* Set a fixed size */
-  width: 50px; /* Set a fixed size */
-}
-
-.notification-suggestions > div > button {
-  padding: 8px 16px; /* Add some padding to buttons */
-  border: none;
-  background-color: #007bff;
-  color: white;
-  cursor: pointer;
-  border-radius: 20px;
-  width: 60%;
-  height: 30%;
-}
-
-.notification-suggestions > div > button:hover {
-  background-color: #0056b3;
-}
-
-.main-content {
-  flex-grow: 5;
-  flex-shrink: 0;
-  /*border: 1px solid white;*/
-}
-
-/*.footer {
-  position: relative;
-}*/
-
-.sidebar {
-  display: none;
-}
-
-.footer-container {
-  height: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.posts {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: space-evenly;
-  padding: 15px;
-  flex-wrap: nowrap;
-}
-
-.post {
-  width: 100%;
-  max-width: 600px;
-  margin: 20px auto;
-  border-radius: 8px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-.post-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-}
-
-.profile-pic,
-.mainc.profile > img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.menu-dot {
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.post-image {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-top: 1px solid rgba(245, 245, 245, 0.199);
-  border-bottom: 1px solid rgba(245, 245, 245, 0.199);
-  border-radius: 10px;
-}
-
-.post p {
-  padding: 10px;
-  color: #ffffff;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-.like {
-  display: flex;
-  justify-content: space-between;
-}
-.like-left > img,
-.like-right > img {
-  margin-top: 10px;
-  margin-right: 20px;
-  filter: invert(1);
-}
-.like-left > svg,
-.like-right > svg {
-  margin-top: 10px;
-  margin-right: 20px;
-}
-
-.emp {
-  height: 20vh;
-}
-
-.post-suggestions {
-  height: 45vh;
-}
-
-.suggestionsFYP {
-  height: auto;
-  display: flex;
-  width: 100%;
-  gap: 15px;
-  justify-content: center;
-  overflow-x: scroll;
-  flex-wrap: nowrap;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  flex-shrink: 0; /* Prevent shrinking */
-  /* Added width and flex-grow to maintain space */
-  flex-grow: 0;
-}
-
-.suggestionsFYP::-webkit-scrollbar {
-  width: 0;
-}
-
-.suggestionsFYP > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 80%;
-  width: auto;
-  padding: 20px;
-  border: 1px solid rgba(245, 245, 245, 0.199);
-  overflow: hidden;
-  flex-shrink: 0; /* Prevent shrinking of individual suggestion items */
-}
-
-.suggest > .cancel {
-  text-align: right;
-}
-.suggest > div:not(.cancel):not(.suggestion-pic) {
-  border-top: 1px solid whitesmoke;
-  text-align: center;
-  align-content: center;
-  height: auto;
-  width: 100%;
-  color: blue;
-}
-
-.suggestedFollows {
-  display: flex;
-  flex-direction: column;
-  height: 60vh;
-  justify-content: space-evenly;
-  align-items: center;
-  padding-top: 60px;
-  padding-right: 100px;
-  /*border: 1px solid wheat;*/
-}
-.suggestedFollows > div {
-  display: flex;
-  gap: 20px;
-}
-.suggestedFollows > .img-flex > img {
-  border-radius: 50%;
-  height: 70px;
-  width: 70px;
-  margin-bottom: 30px;
-  object-fit: cover;
-}
-.suggestedFollows > .img-flex > img:not(.icon) {
-  height: 20px;
-  width: 20px;
-  margin-top: 15px;
-}
-
-.mainc.profile,
-.emp,
-.suggestedFollows {
-  display: none;
-}
-
-.post-flex {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  padding-top: 50px;
-}
-.search_input {
-  width: 300px;
-  height: 30px;
-  border-radius: 10px;
-  margin-bottom: 20%;
-  background-color: rgb(68, 67, 67);
-  border: 1px solid black;
-  color: white;
-}
-
-.icons.magnify {
-  display: none;
-}
-
-dialog {
-  all: unset; /* Resets all default styles of the dialog */
-  position: fixed; /* Ensures it behaves like a modal */
-  height: 100vh;
-  width: 100vw;
-  background-color: rgba(0, 0, 0, 0.341); /* Transparent background */
-}
-
-.dialog-cancel {
-  text-align: right;
-  font-size: 2rem;
-  margin-top: 50px;
-  margin-right: 20px; /* Add margin to move it away from the edges */
-  cursor: pointer; /* Makes it look clickable */
-  position: absolute; /* Allows precise positioning */
-  top: 20px; /* Adjust these values to place it properly */
-  right: 20px;
-}
-
-.dialog-flex {
-  display: flex;
-  height: 100vh;
-  width: 100vw;
-  background-color: rgba(128, 128, 128, 0);
-  justify-content: center;
-  align-items: center;
-}
-
-.drag_post {
-  background-color: rgb(50, 48, 48);
-  border-radius: 25px;
-  height: 40%;
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  position: relative; /* Relative positioning for child elements */
-}
-.drag_post > p {
-  margin-bottom: 30%;
-}
-.drag_post > div > img {
-  margin-left: 40%;
-  height: 30%;
-  width: auto;
-}
-.drag_post > div > button {
-  height: 30px;
-  width: 200px;
-  background-color: rgb(0, 191, 255);
-  border-radius: 20px;
-  border: 1px solid black;
-  box-shadow: 2px 3px 3px rgb(126, 136, 157);
-  color: #ffffff;
-  margin-left: 20%;
-}
-
-.emp > p {
-  font-size: 1.3rem;
-
-  margin-top: 40%;
-}
-
-.footer > .footer-container > .create {
-  cursor: pointer;
-}
-@media (max-width: 599px) {
-  .search_input {
-    display: none;
-  }
-  .header-container {
-    margin-bottom: 15%;
-  }
-  .icons.magnify {
-    display: inline-block;
-  }
-}
-
-@media (min-width: 781px) and (max-width: 1162px) {
-  body {
-    display: grid;
-    grid-template-columns: 10vw 90vw;
-    grid-template-rows: 1fr;
-  }
-  .sidebar {
-    display: block;
-    padding-left: 0px;
-    padding-left: 20px;
-  }
-
-  .main-content::-webkit-scrollbar {
-    display: none;
-    width: 0;
-  }
-  .main-content {
+.profilesAndPosts{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     overflow-y: scroll;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-
-  .suggestionsFYP {
-    grid-column: 2;
-    width: 500px;
-  }
-
-  .dash2 > a > div {
-    margin-bottom: 40px;
-  }
-  .dash3 > a > div {
-    margin-bottom: 40px;
-  }
-  .post p {
-    font-size: 1.1rem;
-  }
-
-  .img-flex > p {
-    display: none;
-  }
-
-  .drag_post {
-    height: 50%;
-    width: 50%;
-  }
-
-  .header,
-  .footer,
-  .dash1 {
-    display: none;
-  }
+    min-width:80%;
+    
+}
+.profiles{
+    display:flex;
+    flex-direction: column;
+    gap:10%;
+    width: 90%;
+    
+}
+ .profile-container,.suggestion-container{
+    display:flex;
+    gap: 5%;
+    overflow-x: scroll;
+   padding:10%;
+ }
+ 
+ .profile-pic{
+  border-radius:50%;
+  height:70px;
+  width:70px;
+  
+}
+.suggest{
+    border: 1px solid rgba(250, 248, 248, 0.525);
+}
+.empty{
+    width:10%;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+nav.navigation{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    height: 100vh;
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+}
+.img-flex{
+    display: flex;
+    gap: 5%;
 }
 
-@media (min-width: 1163px) and (max-width: 1266px) {
-  body {
-    display: grid;
-    grid-template-columns: 10vw 1fr;
-    grid-template-rows: 1fr;
+.posts{
+    margin:10px auto;
+    width:60%;
+}
+/* Basic post container */
+.post {
+    width: 100%;
+    max-width: 600px; /* Limit the max width of posts */
+    margin: 20px auto; /* Center the post */
+    background-color: #222020;
+    border: 1px solid #111111;
+    border-radius: 10px;
+    overflow: hidden; /* Ensures that content inside is contained */
   }
-
-  .sidebar,
-  .suggestedFollows,
-  .emp,
-  .post-suggestions {
-    display: block;
+  
+  /* Post image container */
+  .post-image {
+    width: 100%;
+    height: 0;
+    padding-top: 100%; /* This maintains a 1:1 aspect ratio (square image) */
+    position: relative;
   }
-
-  .suggestionsFYP {
-    width: 600px;
-  }
-
-  .sidebar {
-    grid-column: 1/2;
-    padding-left: 0px;
-    padding-left: 20px;
-  }
-  .dash > a > .img-flex > p {
-    display: none;
-  }
-  .dash2 > a > div {
-    margin-bottom: 40px;
-  }
-  .dash3 > a > div {
-    margin-bottom: 40px;
-  }
-  .main-content {
-    grid-column: 2;
-    max-width: 90vw;
-  }
-  .post p {
-    font-size: 1.2rem;
-  }
-  .mainc.profile {
-    display: block;
-  }
-
-  .grid-main::-webkit-scrollbar {
-    display: none;
-    width: 0;
-  }
-
-  .grid-main {
-    display: grid;
-    grid-template-columns: 2fr 3fr;
-    grid-template-rows: 1fr;
+  
+  /* The image itself */
+  .post-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-
-    overflow-y: auto;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    /*border: 1px solid white;*/
+    object-fit: cover; /* Ensures the image fills the space without distortion */
   }
-  .dash > h1 {
-    display: none;
+  
+  /* Example of post footer and header styles */
+  .post-header, .post-footer {
+    padding: 15px;
   }
-
-  .mainc.suggestedFollows {
-    grid-column: 3;
-
-    /*border: 1px solid white;*/
+  
+  .post-header {
+    background-color: #1a1919;
+    border-bottom: 1px solid #181717;
   }
-
-  .header {
-    display: none;
-  }
-  .con.post.footer {
-    display: none;
+  
+  .post-footer {
+    background-color: #090808;
+    border-top: 1px solid #181515;
   }
 
-  .grid-main > .profile > img {
-    margin-top: 35px;
-    margin-left: 70px;
-  }
-  .drag_post {
-    height: 50%;
-    width: 50%;
-  }
+ dialog.notification, dialog.search{
+  display: none;
+  position:fixed;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right:75vw;
+  height:100vh;
+  width:25vw;
+  z-index:100;
+  background-color:black;
+  display:none;
+  flex-direction:column;
+  gap:5%;
+ }
+ dialog[open]{
+  display:flex;
+ }  
+ 
+/*show only icons on side bar and no suggested follows*/
+@media (min-width: 781px) and (max-width: 1162px)
+{}
+
+
+/*this is for the part
+where the navbar only shows icons and also 
+shows suggested folows*/
+@media (min-width: 1163px) and (max-width: 1266px){
+
 }
+@media (min-width: 1267px){
+ body{
+    display:grid;
+    grid-template-columns: 15vw 60vw 25vw;
+    height:100vh;
+ }
+ #nav-home{
+    display:flex;
+ }
+ nav{
+    grid-column:1/2;
+    width:15vw;
+    height: 100%;
+ }
 
-@media (min-width: 1267px) {
-  body {
-    display: grid;
-    grid-template-columns: 15vw 2fr 1fr;
-    grid-template-rows: 1fr;
-  }
-
-  .sidebar,
-  .suggestedFollows,
-  .emp,
-  .post-suggestions {
-    display: block;
-  }
-
-  .suggestionsFYP {
-    width: 700px;
-  }
-
-  .sidebar,
-  .side-notification {
-    grid-column: 1/2;
-  }
-
-  .main-content {
+ main.main{
     grid-column: 2/3;
-  }
-  .post p {
-    font-size: 1.2rem;
-  }
-  .mainc.profile {
-    display: block;
-  }
-
-  .grid-main::-webkit-scrollbar {
-    display: none;
-    width: 0;
-  }
-
-  .grid-main {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: 1fr;
     height: 100%;
-    overflow-y: auto;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    /*border: 1px solid white;*/
-  }
+    min-width: 60vw;
+ }
 
-  .mainc.suggestedFollows {
-    grid-column: 3;
-  }
+ aside.suggested-profiles{
+    grid-column: 3/4;
+    width:25vw;
+    height:100%
+ }
+ 
 
-  .header {
+ .header, .footer{
     display: none;
-  }
-  .con.post.footer {
-    display: none;
-  }
-
-  .grid-main > .profile > img {
-    margin-top: 35px;
-    margin-left: 70px;
-  }
-
-  .drag_post {
-    height: 60%;
-    width: 40%;
-  }
+ }
 }
+
+

@@ -13,7 +13,7 @@
     <title>Instagram</title>
   </head>
   <body>
-    <header class="con header">
+    <header class="header">
       <div class="whole">
         <div class="header-container">
           <h2>Instagram</h2>
@@ -117,46 +117,50 @@
       </div>
     </header>
 
-    <aside class="con sidebar active">
-      <div class="dash1 dash">
-        <h1>Instagram</h1>
-      </div>
-      <div class="dash2 dash">
-        <a href="search/index.html">
+    <!--NAVIGATION SIDE BAR FOR DESKTOPS AND SIMILAR SCREEN SIZES-->
+    <nav id="nav-home" class="navigation">
+      <section class="instagram-logo">
+        <img src="instagram-logo.png" alt="instagram logo" />
+      </section>
+      <section class="nav-links">
+        <a href="#" data-sidebar="nav-home" class="nav-link">
           <div class="img-flex">
             <img class="icons" src="icons/home.svg" />
             <p>Home</p>
           </div>
         </a>
-
-        <a>
+        <a href="#" data-sidebar="search" class="nav-link">
           <div class="img-flex">
             <img class="icons" src="icons/magnify.svg" />
             <p>Search</p>
           </div>
         </a>
-
-        <a
-          ><div class="img-flex">
+        <a href="#" class="nav-link">
+          <div class="img-flex">
             <img class="icons" src="icons/compass-outline.svg" />
             <p>Explore</p>
-          </div></a
-        >
-        <a
-          ><div class="img-flex">
+          </div>
+        </a>
+        <a href="#" class="nav-link">
+          <div class="img-flex">
             <img class="icons" src="icons/icons8-instagram-reels.svg" />
             <p>Reels</p>
-          </div></a
-        >
-
-        <a
-          ><div class="img-flex">
+          </div>
+        </a>
+        <a href="#" class="nav-link">
+          <div class="img-flex">
             <img class="icons" src="icons/icons8-message.svg" />
             <p>Messages</p>
-          </div></a
-        >
-        <a
-          ><div id="notification" class="img-flex">
+          </div>
+        </a>
+        <a href="#" data-sidebar="messages" class="nav-link">
+          <div class="img-flex">
+            <img class="icons" src="icons/icons8-message.svg" />
+            <p>Messages</p>
+          </div>
+        </a>
+        <a href="#" data-sidebar="notification" class="nav-link">
+          <div id="notify-icon" class="img-flex">
             <svg
               class="side-heart"
               xmlns="http://www.w3.org/2000/svg"
@@ -174,523 +178,209 @@
             </svg>
 
             <p>Notifications</p>
-          </div></a
-        >
-
-        <a class="create"
-          ><div class="img-flex">
-            <img class="icons" src="icons/more.svg" />
-            <p>Create</p>
-          </div></a
-        >
-
-        <a
-          ><div class="img-flex">
-            <img class="icons" src="icons/profile.png" />
-            <p>Profile</p>
-          </div></a
-        >
-      </div>
-      <div class="dash3 dash">
-        <a>
-          <div class="img-flex">
-            <img class="icons" src="icons/threads.svg" />
-            <p>Threads</p>
           </div>
         </a>
-        <a>
+        <a href="#" class="nav-link">
           <div class="img-flex">
-            <img class="icons" src="icons/menu.svg" />
-            <p>More</p>
+            <img class="icons" src="icons/icons8-message.svg" />
+            <p>Messages</p>
           </div>
         </a>
+      </section>
+
+      <section class="extras">
+        <a href="#" class="nav-link">
+          <div class="img-flex">
+            <img class="icons" src="icons/icons8-message.svg" />
+            <p>Messages</p>
+          </div>
+        </a>
+
+        <a href="#" class="nav-link">
+          <div class="img-flex">
+            <img class="icons" src="icons/icons8-message.svg" />
+            <p>Messages</p>
+          </div>
+        </a>
+      </section>
+    </nav>
+
+    <!--PANELS FOR NOTIFICATIONS AND SEARCH-->
+    <dialog id="notification" class="notification panel">
+      <p>notification</p>
+      <a href="#" class="nav-link">
+        <div class="img-flex">
+          <img class="icons" src="icons/icons8-message.svg" />
+          <p>Messages</p>
+        </div>
+      </a>
+      <a href="#" class="nav-link">
+        <div class="img-flex">
+          <img class="icons" src="icons/icons8-message.svg" />
+          <p>Messages</p>
+        </div>
+      </a>
+    </dialog>
+
+    <dialog id="search" class="search panel">
+      <div class="notification-content">
+        <p>search</p>
       </div>
-    </aside>
+    </dialog>
 
-    <aside class="side-notification">
-      <p>Notifications</p>
-
-      <div class="circle-heart">
-        <img class="icons" src="icons/icons8-heart-80.svg" />
-      </div>
-      <p>Activity On Your Posts</p>
-      <p>
-        When someone likes or comments on one of your posts,<br />
-        you'll see it here.
-      </p>
-      <p>Suggested For You</p>
-      <div class="notification-suggestions">
-        <div>
-          <img src="images/sample profile pics/cat-2869825_1280.jpg" />
-          <div>
-            <p>blah</p>
-            <p>sulkingGregory</p>
+    <!--MAIN CONTENT-->
+    <main class="main">
+      <section class="empty"></section>
+      <section class="profilesAndPosts">
+        <section class="profiles">
+          <div class="profile-container">
+            <a class="p-img">
+              <img class="profile-pic" src="images/sample profile pics/cat-2869825_1280.jpg" />
+            </a>
+            <a class="p-img">
+              <img class="profile-pic" src="images/sample profile pics/doe-2836281_1280.jpg" />
+            </a>
+            <a class="p-img">
+              <img class="profile-pic" src="images/sample profile pics/man-6830588_1280.jpg" />
+            </a>
+            <a class="p-img">
+              <img class="profile-pic" src="images/sample profile pics/beauty-7471451_1280.jpg" />
+            </a>
           </div>
 
-          <button>Follow</button>
-        </div>
-        <div>
-          <img src="images/sample profile pics/cat-2869825_1280.jpg" />
-          <div>
-            <p>sulkingGregory</p>
-          </div>
-
-          <button>Follow</button>
-        </div>
-        <div>
-          <img src="images/sample profile pics/cat-2869825_1280.jpg" />
-          <div>
-            <p>sulkingGregory</p>
-          </div>
-
-          <button>Follow</button>
-        </div>
-        <div>
-          <img src="images/sample profile pics/cat-2869825_1280.jpg" />
-          <div>
-            <p>sulkingGregory</p>
-          </div>
-
-          <button>Follow</button>
-        </div>
-        <div>
-          <img src="images/sample profile pics/cat-2869825_1280.jpg" />
-          <div>
-            <p>sulkingGregory</p>
-          </div>
-
-          <button>Follow</button>
-        </div>
-        <div>
-          <img src="images/sample profile pics/cat-2869825_1280.jpg" />
-          <div>
-            <p>sulkingGregory</p>
-            <p>blah</p>
-          </div>
-          <p>blah</p>
-          <button>Follow</button>
-        </div>
-        <div>
-          <img src="images/sample profile pics/cat-2869825_1280.jpg" />
-          <div>
-            <p>sulkingGregory</p>
-          </div>
-
-          <button>Follow</button>
-        </div>
-        <div>
-          <img src="images/sample profile pics/cat-2869825_1280.jpg" />
-          <div>
-            <p>sulkingGregory</p>
-          </div>
-
-          <button>Follow</button>
-        </div>
-      </div>
-    </aside>
-
-    <main class="con main-content">
-      <div class="grid-main">
-        <div class="mainc profile">
-          <img src="images/sample profile pics/woman-1867715_1280.jpg" />
-        </div>
-
-        <div class="mainc posts">
-          <div class="post-flex">
-            <div class="emp">
-              <p>Suggestions for you</p>
-            </div>
-            <div class="suggestionsFYP">
-              <div class="suggest">
-                <div class="cancel">x</div>
-                <div class="suggestion-pic">
-                  <img src="images/sample profile pics/girl-4660954_1280.jpg" />
-                  <p>blah blah blah</p>
-                </div>
-                <div>Follow</div>
-              </div>
-              <div class="suggest">
-                <div class="cancel">x</div>
-                <div class="suggestion-pic">
-                  <img src="images/sample profile pics/man-1161337_1280.jpg" />
-                  <p>blah blah blah</p>
-                </div>
-                <div>Follow</div>
-              </div>
-              <div class="suggest">
-                <div class="cancel">x</div>
-                <div class="suggestion-pic">
-                  <img
-                    src="images/sample profile pics/woman-7956325_1280.jpg"
-                  />
-                  <p>blah blah blah</p>
-                </div>
-                <div>Follow</div>
-              </div>
-              <div class="suggest">
-                <div class="cancel">x</div>
-                <div class="suggestion-pic">
-                  <img src="images/sample profile pics/man-8847069_1280.jpg" />
-                  <p>blah blah blah</p>
-                </div>
-                <div>Follow</div>
-              </div>
-              <div class="suggest">
-                <div class="cancel">x</div>
-                <div class="suggestion-pic">
-                  <img src="images/sample profile pics/man-8847069_1280.jpg" />
-                  <p>blah blah blah</p>
-                </div>
-                <div>Follow</div>
-              </div>
-              <div class="suggest">
-                <div class="cancel">x</div>
-                <div class="suggestion-pic">
-                  <img src="images/sample profile pics/man-8847069_1280.jpg" />
-                  <p>blah blah blah</p>
-                </div>
-                <div>Follow</div>
-              </div>
+          <div class="suggestion-container">
+            <div class="suggest">
+              <p>X</p>
+              <a class="p-img">
+                <img class="profile-pic" src="images/sample profile pics/woman-1867715_1280.jpg" />
+              </a>
+              <p>Follow catherine_theGreat</p>
             </div>
 
-            <div class="post-suggestions">
-              <div class="post post_1">
-                <div class="post-header">
-                  <img
-                    src="images/sample profile pics/beauty-7471451_1280.jpg"
-                    alt="Profile Picture"
-                    class="profile-pic"
-                  />
-                  <div class="menu-dot">•••</div>
-                </div>
-                <img
-                  src="images/posts/photo_5_2024-11-28_14-34-43.jpg"
-                  class="post-image"
-                />
-                <div class="like">
-                  <div class="like-left">
-                    <svg
-                      class="heart-icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      width="32"
-                      height="32"
-                      fill="none"
-                    >
-                      <path
-                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-                        fill="none"
-                        stroke="white"
-                        stroke-width="1"
-                      />
-                    </svg>
+            <div class="suggest">
+              <p>X</p>
+              <a class="p-img">
+                <img class="profile-pic" src="images/sample profile pics/woman-546103_1280.jpg" />
+              </a>
+              <p>Follow catherine_theGreat</p>
+            </div>
 
-                    <img src="icons/icons8-message.svg" />
-                    <img src="icons/icons8-telegram-app.svg" />
-                  </div>
+            <div class="suggest">
+              <p>X</p>
+              <a class="p-img">
+                <img class="profile-pic" src="images/sample profile pics/girl-4668620_1280.jpg" />
+              </a>
+              <p>Follow catherine_theGreat</p>
+            </div>
 
-                  <div class="like-right">
-                    <img src="icons/icons8-bookmark.svg" />
-                  </div>
-                </div>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Deserunt modi corrupti est totam accusamus...
-                </p>
-              </div>
-              <div class="post post_2">
-                <div class="post-header">
-                  <img
-                    src="images/sample profile pics/woman-1867715_1280.jpg"
-                    alt="Profile Picture"
-                    class="profile-pic"
-                  />
-                  <div class="menu-dot">•••</div>
-                </div>
-                <img
-                  src="images/posts/photo_1_2024-11-28_14-34-43.jpg"
-                  class="post-image"
-                />
-                <div class="like">
-                  <div class="like-left">
-                    <svg
-                      class="heart-icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      width="32"
-                      height="32"
-                      fill="none"
-                    >
-                      <path
-                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-                        fill="none"
-                        stroke="white"
-                        stroke-width="1"
-                      />
-                    </svg>
-
-                    <img src="icons/icons8-message.svg" />
-                    <img src="icons/icons8-telegram-app.svg" />
-                  </div>
-
-                  <div class="like-right">
-                    <img src="icons/icons8-bookmark.svg" />
-                  </div>
-                </div>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Deserunt modi corrupti est totam accusamus...
-                </p>
-              </div>
-              <div class="post post_3">
-                <div class="post-header">
-                  <img
-                    src="images/sample profile pics/man-1161337_1280.jpg"
-                    alt="Profile Picture"
-                    class="profile-pic"
-                  />
-                  <div class="menu-dot">•••</div>
-                </div>
-                <img
-                  src="images/posts/photo_2_2024-11-28_14-35-14.jpg"
-                  class="post-image"
-                />
-                <div class="like">
-                  <div class="like-left">
-                    <svg
-                      class="heart-icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      width="32"
-                      height="32"
-                      fill="none"
-                    >
-                      <path
-                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-                        fill="none"
-                        stroke="white"
-                        stroke-width="1"
-                      />
-                    </svg>
-
-                    <img src="icons/icons8-message.svg" />
-                    <img src="icons/icons8-telegram-app.svg" />
-                  </div>
-
-                  <div class="like-right">
-                    <img src="icons/icons8-bookmark.svg" />
-                  </div>
-                </div>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Deserunt modi corrupti est totam accusamus...
-                </p>
-              </div>
-              <div class="post post_3">
-                <div class="post-header">
-                  <img
-                    src="icons/profile.png"
-                    alt="Profile Picture"
-                    class="profile-pic"
-                  />
-
-                  <div class="menu-dot">•••</div>
-                </div>
-                <img
-                  src="images/posts/photo_11_2024-11-28_14-35-14.jpg"
-                  class="post-image"
-                />
-                <div class="like">
-                  <div class="like-left">
-                    <svg
-                      class="heart-icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      width="32"
-                      height="32"
-                      fill="none"
-                    >
-                      <path
-                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-                        fill="none"
-                        stroke="white"
-                        stroke-width="1"
-                      />
-                    </svg>
-
-                    <img src="icons/icons8-message.svg" />
-                    <img src="icons/icons8-telegram-app.svg" />
-                  </div>
-
-                  <div class="like-right">
-                    <img src="icons/icons8-bookmark.svg" />
-                  </div>
-                </div>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Deserunt modi corrupti est totam accusamus...
-                </p>
-              </div>
-              <div class="post post_3">
-                <div class="post-header">
-                  <img
-                    src="icons/profile.png"
-                    alt="Profile Picture"
-                    class="profile-pic"
-                  />
-                  <div class="menu-dot">•••</div>
-                </div>
-                <img
-                  src="images/posts/photo_6_2024-11-28_14-35-14.jpg"
-                  class="post-image"
-                />
-                <div class="like">
-                  <div class="like-left">
-                    <svg
-                      class="heart-icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      width="32"
-                      height="32"
-                      fill="none"
-                    >
-                      <path
-                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-                        fill="none"
-                        stroke="white"
-                        stroke-width="1"
-                      />
-                    </svg>
-
-                    <img src="icons/icons8-message.svg" />
-                    <img src="icons/icons8-telegram-app.svg" />
-                  </div>
-
-                  <div class="like-right">
-                    <img src="icons/icons8-bookmark.svg" />
-                  </div>
-                </div>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Deserunt modi corrupti est totam accusamus...
-                </p>
-              </div>
-              <div class="post post_3">
-                <div class="post-header">
-                  <img
-                    src="icons/profile.png"
-                    alt="Profile Picture"
-                    class="profile-pic"
-                  />
-                  <div class="menu-dot">•••</div>
-                </div>
-                <img
-                  src="images/posts/photo_14_2024-11-28_14-35-14.jpg"
-                  class="post-image"
-                />
-                <div class="like">
-                  <div class="like-left">
-                    <svg
-                      class="heart-icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      width="32"
-                      height="32"
-                      fill="none"
-                    >
-                      <path
-                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-                        fill="none"
-                        stroke="white"
-                        stroke-width="1"
-                      />
-                    </svg>
-
-                    <img src="icons/icons8-message.svg" />
-                    <img src="icons/icons8-telegram-app.svg" />
-                  </div>
-
-                  <div class="like-right">
-                    <img src="icons/icons8-bookmark.svg" />
-                  </div>
-                </div>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Deserunt modi corrupti est totam accusamus...
-                </p>
-              </div>
-
-              <footer class="con post footer">
-                <div class="footer-container">
-                  <img class="icons" src="icons/home.svg" />
-                  <img class="icons" src="icons/magnify.svg" />
-                  <a class="create"
-                    ><img class="icons" src="icons/plus-box-outline.svg"
-                  /></a>
-                  <img class="icons" src="icons/compass-outline.svg" />
-                  <img class="icons" src="icons/profile.png" />
-                </div>
-              </footer>
-
-              <dialog id="dialog">
-                <div class="dialog-cancel">X</div>
-                <div class="dialog-flex">
-                  <div class="drag_post">
-                    <p>Create New Post</p>
-                    <div>
-                      <img src="icons/icons8-upload-100 (1).svg" />
-                      <p>Drag and Drop Photos and Videos Here</p>
-                      <button>Upload</button>
-                    </div>
-                  </div>
-                </div>
-              </dialog>
+            <div class="suggest">
+              <p>X</p>
+              <a class="p-img">
+                <img class="profile-pic" src="images/sample profile pics/cat-318765_1280.jpg" />
+              </a>
+              <p>Follow catherine_theGreat</p>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div class="mainc suggestedFollows">
-          <div class="img-flex">
-            <img
-              class="icon"
-              src="images/sample profile pics/ai-generated-8489598_1280.png"
-            />
-            <p>the_art_aclove</p>
-            <img src="icons/icons8-instagram-verification-badge.svg" />
-          </div>
-          <div class="img-flex">
-            <img
-              class="icon"
-              src="images/sample profile pics/cat-2869825_1280.jpg"
-            />
-            <p>catitio_potitoe</p>
-          </div>
-          <div class="img-flex">
-            <img
-              class="icon"
-              src="images/sample profile pics/man-7881077_1280.jpg"
-            />
-            <p>heimien_salex</p>
-            <img src="icons/icons8-instagram-verification-badge.svg" />
-          </div>
-          <div class="img-flex">
-            <img
-              class="icon"
-              src="images/sample profile pics/woman-546103_1280.jpg"
-            />
-            <p>Lily_rose</p>
-          </div>
-          <div class="img-flex">
-            <img
-              class="icon"
-              src="images/sample profile pics/ai-generated-8573655_1280.jpg"
-            />
-            <p>verions_angel</p>
-            <img src="icons/icons8-instagram-verification-badge.svg" />
-          </div>
-        </div>
-      </div>
+        <section class="posts">
+          <article class="post">
+            <header class="post-header">
+              <img class="profile-pic" src="images/sample profile pics/ai-generated-8573655_1280.jpg" />
+              <p>username</p>
+              <p>...</p>
+            </header>
+            <div class="post-image">
+              <img class="post-pic" src="images/posts/photo_11_2024-11-28_14-35-14.jpg" />
+            </div>
+
+            <footer class="post-footer">
+              <img class="icons" src="icons/icons8-heart-outline.svg" />
+              <img class="icons" src="icons/icons8-message.svg" />
+              <img class="icons" src="icons/icons8-paper-plane.svg" />
+              <img class="icons" src="icons/icons8-bookmark.svg" />
+            </footer>
+          </article>
+          <article class="post">
+            <header class="post-header">
+              <img class="profile-pic" src="icons/icons8-instagram-reels.svg" />
+              <p>username</p>
+              <p>...</p>
+            </header>
+            <div class="post-image">
+              <img class="post-pic" src="images/posts/photo_7_2024-11-28_14-35-14.jpg" />
+            </div>
+
+            <footer class="post-footer">
+              <img class="icons" src="icons/icons8-heart-outline.svg" />
+              <img class="icons" src="icons/icons8-message.svg" />
+              <img class="icons" src="icons/icons8-paper-plane.svg" />
+              <img class="icons" src="icons/icons8-bookmark.svg" />
+            </footer>
+          </article>
+
+          <article class="post">
+            <header class="post-header">
+              <img class="profile-pic" src="icons/icons8-instagram-reels.svg" />
+              <p>username</p>
+              <p>...</p>
+            </header>
+            <div class="post-image">
+              <img class="post-pic" src="images/posts/photo_14_2024-11-28_14-35-14.jpg" />
+            </div>
+
+            <footer class="post-footer">
+              <img class="icons" src="icons/heart-outline.svg" />
+              <img class="icons" src="icons/icons8-message.svg" />
+              <img class="icons" src="icons/icons8-telegram-app.svg" />
+              <img class="icons" src="icons/icons8-bookmark.svg" />
+            </footer>
+          </article>
+
+          <article class="post">
+            <header class="post-header">
+              <img class="profile-pic" src="icons/icons8-instagram-reels.svg" />
+              <p>username</p>
+              <p>...</p>
+            </header>
+            <div class="post-image">
+              <img class="post-pic" src="images/posts/photo_4_2024-11-28_14-34-43.jpg" />
+            </div>
+
+            <footer class="post-footer">
+              <img class="icons" src="icons/icons8-heart-outline.svg" />
+              <img class="icons" src="icons/icons8-message.svg" />
+              <img class="icons" src="icons/icons8-telegram-app.svg" />
+              <img class="icons" src="icons/icons8-bookmark.svg" />
+            </footer>
+          </article>
+        </section>
+      </section>
     </main>
+
+    <aside class="suggested-profiles">
+      <div class="suggested-profile">
+        <img src="icons/icons8-instagram-reels.svg" />
+        <p>username</p>
+        <p>Follow</p>
+      </div>
+    </aside>
+
+    <footer class="footer"></footer>
+
+    <dialog id="dialog">
+      <div class="dialog-cancel">X</div>
+      <div class="dialog-flex">
+        <div class="drag_post">
+          <p>Create New Post</p>
+          <div>
+            <img src="icons/icons8-upload-100 (1).svg" />
+            <p>Drag and Drop Photos and Videos Here</p>
+            <button>Upload</button>
+          </div>
+        </div>
+      </div>
+    </dialog>
 
     <script src="script.js"></script>
   </body>

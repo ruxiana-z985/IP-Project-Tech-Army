@@ -7,7 +7,33 @@ if (!sessionStorage.getItem('visited')) {
   }
 
 
-
+  const notificationDialog = document.getElementById('notification');
+  const searchDialog = document.getElementById('search');
+  const notificationIcon = document.querySelector('[data-sidebar="notification"]');
+  const searchIcon = document.querySelector('[data-sidebar="search"]');
+  
+  // Show the dialog when clicking the notification icon
+  notificationIcon.addEventListener('click', (e) => {
+      e.stopPropagation(); // Prevent the click from reaching the document listener
+      notificationDialog.show(); // Show the dialog
+  });
+  
+  // Show the dialog when clicking the search icon
+  searchIcon.addEventListener('click', (e) => {
+      e.stopPropagation(); // Prevent the click from reaching the document listener
+      searchDialog.show(); // Show the dialog
+  });
+  
+  // Close the dialogs when clicking outside of them
+  document.addEventListener('click', (e) => {
+      if (!notificationDialog.contains(e.target) && e.target !== notificationIcon) {
+          notificationDialog.close(); // Close the notification dialog
+      }
+      if (!searchDialog.contains(e.target) && e.target !== searchIcon) {
+          searchDialog.close(); // Close the search dialog
+      }
+  });
+  
 
 
 
@@ -69,72 +95,9 @@ dialog_cancel.addEventListener("click", function(){
 
 
 
-//REMOVE SUGGESTED PROFILES FUNCTIONALITY
-const fyp=document.querySelector(".suggestionsFYP");
-
-fyp.addEventListener("click", function(event){
-    // Check if the clicked element has the class "cancel"
-    if (event.target.classList.contains("cancel")) {
-        // Find the closest parent div with the class "suggestion-item" and remove it
-        const parentDiv = event.target.closest('.suggest');
-        if (parentDiv) {
-            parentDiv.remove();
-        }
-    }
- });
 
  
 
 
 
- //NOTIFICATION PAGE DISPLAY
-
- const notification = document.getElementById("notification");
-const notify = document.querySelector(".side-notification");
-const sidebar = document.querySelector(".con.sidebar");
-const notification_icon=document.querySelector(".side-heart");
-const path=notification_icon.querySelector("path");
-
-window.addEventListener('resize', function () {
-  if (window.innerWidth < 781) {
-    notify.style.display = "none";
-    path.setAttribute("fill", "none");
-    path.setAttribute("stroke", "white");
-  }
-});
-
-
-
-notification.addEventListener("click", function () {
-  
-
-  // Check the current visibility of the notification
-  const isNotificationVisible = notify.style.display === "flex";
-
-  if (isNotificationVisible) {
-    // Hide the notification
-    notify.style.display = "none";
-    path.setAttribute("fill", "none");
-    path.setAttribute("stroke", "white");
-  } else {
-    // Show the notification
-    notify.style.display = "flex";
-    path.setAttribute("fill", "white");
-    path.setAttribute("stroke", "none");
-  }
-});
-
-  document.addEventListener("click", function (event) {
-    // Check if the click is outside of the notification or notification toggle button
-    if (!notify.contains(event.target) && !notification.contains(event.target)) {
-      // Hide the notification if the click is outside
-      notify.style.display = "none";
-      path.setAttribute("fill", "none");
-      path.setAttribute("stroke", "white");
-       
-    }
-  });
-   
-  //SEARCH PAGE DISPLAY
-
-  //MORE PAGE DISPLAY
+ 
