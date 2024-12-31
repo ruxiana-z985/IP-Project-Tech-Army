@@ -116,11 +116,24 @@ nav.navigation{
   }
   
   .post-header {
+    display:flex;
+    gap:5px;
     background-color: #1a1919;
     border-bottom: 1px solid #181717;
   }
-  
+  .post-header p:nth-of-type(2){
+    margin-left: 60%;
+    font-weight:bold;
+    font-size:1.2rem;
+  }
+  .post-footer img:nth-of-type(4){
+    margin-left:60%;
+   
+  }
   .post-footer {
+    display:flex;
+    flex-wrap: nowrap;
+    gap: 2%;
     background-color: #090808;
     border-top: 1px solid #181515;
   }
