@@ -11,14 +11,44 @@ html,body{
     font-style: normal;
     font-size: 1rem;
 }
+html{
+    scroll-behavior: smooth;
+}
+body{
+  display:flex;
+  flex-direction: column;
+}
+/* Style all scrollbars */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+/* Track (background of the scrollbar) */
+::-webkit-scrollbar-track {
+  background: #0e0e0e; /* Light grey background */
+}
+
+/* Thumb (scrollable part) */
+::-webkit-scrollbar-thumb {
+  background: #4f4e4ef5; /* Darker grey */
+  border-radius: 6px; /* Rounded corners */
+}
+
+/* Thumb hover (scrollable part when hovered) */
+::-webkit-scrollbar-thumb:hover {
+  background: #363535; /* Even darker grey */
+}
+
 .icons{
   filter:invert(1);
   height:35px;
   width:35px;
 }
+
+
 main.main{
     display: flex;
-    max-width:60vw;
+    max-width:100vw;
     
    
 }
@@ -29,22 +59,29 @@ main.main{
     justify-content: center;
     align-items: center;
     overflow-y: scroll;
-    min-width:80%;
+    min-width:100%;
     
+}
+.profilesAndPosts::-webkit-scrollbar{
+    display:none;
 }
 .profiles{
     display:flex;
     flex-direction: column;
     gap:10%;
-    width: 90%;
+    max-width: 90%;
     
 }
  .profile-container,.suggestion-container{
     display:flex;
     gap: 5%;
     overflow-x: scroll;
-   padding:10%;
+    padding:10%;
  }
+ .profile-container::-webkit-scrollbar{
+    display:none; }
+  .suggestion-container::-webkit-scrollbar{
+    display:none; }
  
  .profile-pic{
   border-radius:50%;
@@ -63,7 +100,7 @@ a{
     color: inherit;
 }
 nav.navigation{
-    display: flex;
+    display: none;
     flex-direction:column;
     justify-content: space-between;
     height: 100vh;
@@ -79,12 +116,12 @@ nav.navigation{
 
 .posts{
     margin:10px auto;
-    width:60%;
+    width:100%;
 }
 /* Basic post container */
 .post {
-    width: 100%;
-    max-width: 600px; /* Limit the max width of posts */
+    
+    max-width:100%; /* Limit the max width of posts */
     margin: 20px auto; /* Center the post */
     background-color: #222020;
     border: 1px solid #111111;
@@ -94,7 +131,7 @@ nav.navigation{
   
   /* Post image container */
   .post-image {
-    width: 100%;
+    max-width: 100%;
     height: 0;
     padding-top: 100%; /* This maintains a 1:1 aspect ratio (square image) */
     position: relative;
@@ -155,8 +192,24 @@ nav.navigation{
  }
  dialog[open]{
   display:flex;
- }  
+ }
  
+ .suggested-profiles{
+  display:none;
+  flex-direction: column;
+  gap:2%;
+  margin-top:20%;
+ }
+  .suggested-profile{
+    display:flex;
+    gap: 5%;
+  }
+
+  .verification-badge{
+    height: 35px;
+    width:35px;
+
+  }
 /*show only icons on side bar and no suggested follows*/
 @media (min-width: 781px) and (max-width: 1162px)
 {}
@@ -172,7 +225,9 @@ shows suggested folows*/
  body{
     display:grid;
     grid-template-columns: 15vw 60vw 25vw;
-    height:100vh;
+    max-width: 100vw;
+    max-height:100vh;
+    overflow-x: hidden;
  }
  #nav-home{
     display:flex;
@@ -186,15 +241,25 @@ shows suggested folows*/
  main.main{
     grid-column: 2/3;
     height: 100%;
-    min-width: 60vw;
+    max-width: 60vw;
+
  }
 
  aside.suggested-profiles{
+    display:flex;
     grid-column: 3/4;
     width:25vw;
     height:100%
  }
- 
+ .posts{
+  width:60%;
+ }
+ .post{
+    width: 100%;
+    max-width: 600px; /* Limit the max width of posts */
+    margin: 20px auto;
+ }
+    
 
  .header, .footer{
     display: none;
