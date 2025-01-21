@@ -1,80 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="" href="">
-    <title>Instagram Profile</title>
+    <title>My Profile</title>
 </head>
-<body>
-   <header>
-    <div class="header">
-        <button class="back-btn">&#8592;</button>
-        <h1 class="profile-name">Username</h1>
-        <button class="menu-btn">&#8942;</button>
-    </div>
-   </header>
 
-   <section class="profile-info">
-    <div class="profile-header">
-        <img src="" alt="profile picture" class="profile-pic">
-        <div class="stats">
+<body>
+    <div class="profile-container">
+        <!-- Header -->
+        <div class="profile-header">
             <div>
-                <span class="count">8</span>
-                <p>Posts</p>
+                <div class="account-switch">
+                    <select id="accountSelect">
+                        <option value="account1">Account 1</option>
+                        <option value="account2">Account 2</option>
+                        <option value="account3">Account 3</option>
+                    </select>
+                </div>
+                <div class="settings" id="settingsIcon"><img src="assetsProfile/icons/setting.png" alt="settings"></div>
             </div>
-            <div>
-                <span class="count">560</span>
-                <p>Followers</p>
+
+            <div class="avatar">
+                <img src="https://plus.unsplash.com/premium_photo-1674814950019-b29545fea7a7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXJ0aXN0fGVufDB8fDB8fHww" alt="Profile Picture">
             </div>
-            <div>
-                <span class="count">489</span>
-                <p>Following</p>
+            <div class="profile-stats">
+                <div>
+                    <h4>54</h4>
+                    <p>Posts</p>
+                </div>
+                <div>
+                    <h4>834</h4>
+                    <p>Followers</p>
+                </div>
+                <div>
+                    <h4>162</h4>
+                    <p>Following</p>
+                </div>
             </div>
         </div>
-    </div>
-    
-    <div class="bio">
-        <p><strong>Username</strong></p>
-        <p>Bio text here...</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Consequuntur consequatur eos id ea voluptates!<br> Ullam dicta quasi ea rem. A?</p>
-        <a href="">my website</a>
-    </div>
-     <div class="profile-actions">
-        <button class="action-btn">Edit profile</button>
-        <button class="action-btn">View Archive</button>
-    </div>
-   </section>
-   <section class="story-highlights">
-    <h2>Highlights</h2>
-    <div class="highlights-container">
-        <div class="highlight">
-            <img src="" alt="Highlights" class="highlight-pic">
-            <p>Highlight 1</p>
+        <!-- Bio Section -->
+        <div class="profile-bio">
+            <h3>Jacob West</h3>
+            <p>Digital goodies designer @pixsellz<br>Everything is designed.</p>
+            <button class="edit-profile-btn" id="editProfileBtn">Edit Profile</button>
         </div>
-        <div class="highlight">
-            <img src="" alt="Highlights" class="highlight-pic">
-            <p>Highlight 2</p>
+
+        <!-- Highlights Section -->
+        <div class="highlights">
+            <div class="highlight"><img src="https://images.unsplash.com/photo-1512389142860-9c449e58a543?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hyaXN0bWFzfGVufDB8fDB8fHww" alt="Highlight"></div>
+            <div class="highlight"><img src="https://images.unsplash.com/photo-1643818657367-491080baeece?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZmFtaWx5fGVufDB8fDB8fHww" alt="Highlight"></div>
+            <div class="highlight"><img src="https://plus.unsplash.com/premium_photo-1661598655597-8e6720995532?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGZyaWVuZHN8ZW58MHx8MHx8fDA%3D" alt="Highlight"></div>
+            <div class="highlight"><img src="https://images.unsplash.com/photo-1621112904887-419379ce6824?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGZyaWVuZHN8ZW58MHx8MHx8fDA%3D" alt="Highlight"></div>
         </div>
-        <div class="highlight">
-            <img src="" alt="Highlights" class="highlight-pic">
-            <p>Highlight 3</p>
+
+        <!-- Posts Tabs Section -->
+        <div class="post-tabs">
+            <div class="tab active" id="userPostsTab">Posts</div>
+            <div class="tab" id="taggedPostsTab">Tagged</div>
+        </div>
+
+        <!-- Posts Section -->
+        <div class="posts" id="postsContainer">
+            <div class="post"><img src="https://plus.unsplash.com/premium_photo-1673580742890-4af144293960?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGZvb2R8ZW58MHx8MHx8fDA%3D" alt="Post"></div>
+            <div class="post"><img src="https://images.unsplash.com/photo-1509233725247-49e657c54213?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGJlYWNofGVufDB8fDB8fHww" alt="Post"></div>
+            <div class="post"><img src="https://images.unsplash.com/photo-1475483768296-6163e08872a1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FtcGluZ3xlbnwwfHwwfHx8MA%3D%3D" alt="Post"></div>
+            <div class="post"><img src="https://images.unsplash.com/photo-1587293094245-15c3520d3894?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNodXJjaHxlbnwwfHwwfHx8MA%3D%3D" alt="Post"></div>
+            <div class="post"><img src="https://plus.unsplash.com/premium_photo-1674489620667-eaf4a0094996?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cXVvdGVzfGVufDB8fDB8fHww" alt="Post"></div>
+            <div class="post"><img src="https://images.unsplash.com/photo-1701318227064-549c801e4cc4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGluc3RhZ3JhbSUyMHBvc3RzfGVufDB8fDB8fHww" alt="Post"></div>
+        </div>
+
+        <!-- Footer Section -->
+        <div class="footer">
+            <div class="icon" id="homeIcon"><img src="assetsProfile/icons/home.svg" alt=""></div>
+            <div class="icon" id="searchIcon"><img src="assetsProfile/icons/search.svg" alt=""></div>
+            <div class="icon" id="addIcon"><img src="assetsProfile/icons/plus.svg" alt=""></div>
+            <div class="icon" id="likeIcon"><img src="assetsProfile/icons/heart.svg" alt=""></div>
+            <div class="icon" id="profileIcon"><img src="assetsProfile/icons/profile.jpg" alt=""></div>
         </div>
     </div>
-   </section>
-   <section class="post-grid">
-    <div class="post">
-        <img src="" alt="post 1">
-    </div>
-    <div class="post">
-        <img src="" alt="post 2">
-    </div>
-    <div class="post">
-        <img src="" alt="post 2">
-    </div>
-    <div class="post">
-        <img src="" alt="post 2">
-    </div>
-   </section>
 </body>
+
 </html>
