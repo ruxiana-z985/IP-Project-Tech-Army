@@ -9,7 +9,7 @@
       sizes="64x64"
       type="image/svg+xml"
     />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css" />
     <title>Instagram</title>
   </head>
@@ -21,7 +21,7 @@
     <!--NAVIGATION SIDE BAR FOR DESKTOPS AND SIMILAR SCREEN SIZES-->
     <nav id="nav-home" class="navigation">
       <section class="instagram-logo">
-        <img src="instagram-logo.png" alt="instagram logo" />
+        <img class="icon-insta" src="icons/instagram-text-icon.svg" alt="instagram logo" />
       </section>
       <section class="nav-links">
         <a href="#" data-sidebar="nav-home" class="nav-link">
@@ -54,12 +54,7 @@
             <p>Messages</p>
           </div>
         </a>
-        <a href="#" data-sidebar="messages" class="nav-link">
-          <div class="img-flex">
-            <img class="icons" src="icons/icons8-message.svg" />
-            <p>Messages</p>
-          </div>
-        </a>
+        
         <a href="#" data-sidebar="notification" class="nav-link">
           <div id="notify-icon" class="img-flex">
             <svg
@@ -83,8 +78,14 @@
         </a>
         <a href="#" class="nav-link">
           <div class="img-flex">
-            <img class="icons" src="icons/icons8-message.svg" />
-            <p>Messages</p>
+            <img class="icons" src="icons/more.svg"/>
+            <p>Create</p>
+          </div>
+        </a>
+        <a href="#" data-sidebar="messages" class="nav-link">
+          <div class="img-flex">
+            <img class="icons" src="icons/profile.png" />
+            <p>Profile</p>
           </div>
         </a>
       </section>
@@ -109,7 +110,7 @@
 
     
 
-    <!--PANELS FOR NOTIFICATIONS AND SEARCH-->
+    <!--PANELS FOR NOTIFICATIONS-->
     <dialog id="notification" class="notification panel">
       <p>notification</p>
       <a href="#" class="nav-link">
@@ -125,6 +126,8 @@
         </div>
       </a>
     </dialog>
+
+  <!--PANEL FOR SEARCH FUNCTIONALITY-->
 
     <dialog id="search" class="search panel">
       <div class="notification-content">
@@ -204,6 +207,10 @@
               <img class="icons" src="icons/icons8-telegram-app.svg" />
               <img class="icons" src="icons/icons8-bookmark.svg" />
             </footer>
+            <p class="post-caption">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam asperiores omnis, aperiam fugit magnam eos veniam, repellendus doloremque non provident blanditiis sint iure temporibus 
+              excepturi laborum illum autem voluptates eaque.
+            </p>
           </article>
           <article class="post">
             <header class="post-header">
@@ -221,6 +228,10 @@
               <img class="icons" src="icons/icons8-telegram-app.svg" />
               <img class="icons" src="icons/icons8-bookmark.svg" />
             </footer>
+            <p class="post-caption">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam asperiores omnis, aperiam fugit magnam eos veniam, repellendus doloremque non provident blanditiis sint iure temporibus 
+              excepturi laborum illum autem voluptates eaque.
+            </p>
           </article>
 
           <article class="post">
@@ -239,6 +250,10 @@
               <img class="icons" src="icons/icons8-telegram-app.svg" />
               <img class="icons" src="icons/icons8-bookmark.svg" />
             </footer>
+            <p class="post-caption">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam asperiores omnis, aperiam fugit magnam eos veniam, repellendus doloremque non provident blanditiis sint iure temporibus 
+              excepturi laborum illum autem voluptates eaque.
+            </p>
           </article>
 
           <article class="post">
@@ -257,11 +272,17 @@
               <img class="icons" src="icons/icons8-telegram-app.svg" />
               <img class="icons" src="icons/icons8-bookmark.svg" />
             </footer>
+            <p class="post-caption">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam asperiores omnis, aperiam fugit magnam eos veniam, repellendus doloremque non provident blanditiis sint iure temporibus 
+              excepturi laborum illum autem voluptates eaque.
+            </p>
           </article>
         </section>
       </section>
     </main>
 
+
+    <!--A SIDE PANEL FOR SUGGESTED PROFILES-->
     <aside class="suggested-profiles">
       <div class="suggested-profile">
         <img class="profile-pic" src="images/sample profile pics/doe-2836281_1280.jpg" />

@@ -41,10 +41,16 @@ body{
 
 .icons{
   filter:invert(1);
-  height:35px;
-  width:35px;
+  height:30px;
+  width:30px;
 }
-
+.icon-insta{
+  filter:invert(1);
+   height:50px;
+   width:100px;
+   margin-top:30px;
+  cursor:pointer;
+}
 
 main.main{
     display: flex;
@@ -89,9 +95,24 @@ main.main{
   width:70px;
   
 }
+.post-caption{
+  padding:10px;
+}
+.suggestion-container{
+  max-width: 50%;
+  margin:auto;
+}
+
 .suggest{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center;
+    padding: 10px;
     border: 1px solid rgba(250, 248, 248, 0.525);
 }
+.suggest > p:nth-of-type(1){align-self:flex-end;}
+.suggest > p:nth-of-type(2){text-align:center;}
 .empty{
     width:10%;
 }
@@ -123,8 +144,8 @@ nav.navigation{
     
     max-width:100%; /* Limit the max width of posts */
     margin: 20px auto; /* Center the post */
-    background-color: #222020;
-    border: 1px solid #111111;
+    
+    border: 1px solid #ffffff65;
     border-radius: 10px;
     overflow: hidden; /* Ensures that content inside is contained */
   }
@@ -155,8 +176,9 @@ nav.navigation{
   .post-header {
     display:flex;
     gap:5px;
-    background-color: #1a1919;
-    border-bottom: 1px solid #181717;
+    background-color: black;
+    
+   
   }
   .post-header p:nth-of-type(2){
     margin-left: 60%;
@@ -164,15 +186,15 @@ nav.navigation{
     font-size:1.2rem;
   }
   .post-footer img:nth-of-type(4){
-    margin-left:60%;
+    margin-left:70%;
    
   }
   .post-footer {
     display:flex;
     flex-wrap: nowrap;
     gap: 2%;
-    background-color: #090808;
-    border-top: 1px solid #181515;
+    
+    
   }
 
  dialog.notification, dialog.search{
@@ -197,17 +219,21 @@ nav.navigation{
  .suggested-profiles{
   display:none;
   flex-direction: column;
-  gap:2%;
+  gap:1%;
   margin-top:20%;
  }
   .suggested-profile{
     display:flex;
     gap: 5%;
+    font-size:1rem;
   }
-
+  .suggested-profile > .profile-pic{
+    height:40px;
+    width:40px;
+  }
   .verification-badge{
-    height: 35px;
-    width:35px;
+    height: 25px;
+    width:25px;
 
   }
 /*show only icons on side bar and no suggested follows*/
@@ -236,6 +262,8 @@ shows suggested folows*/
     grid-column:1/2;
     width:15vw;
     height: 100%;
+    margin-left:2%;
+    font-size:1rem;
  }
 
  main.main{
