@@ -95,9 +95,10 @@ main.main{
   width:70px;
   
 }
-.post-caption{
+.post-caption, .like-count{
   padding:10px;
 }
+
 .suggestion-container{
   max-width: 50%;
   margin:auto;
@@ -159,7 +160,7 @@ nav.navigation{
   }
   
   /* The image itself */
-  .post-image img {
+  .post-image img, .post-image video {
     position: absolute;
     top: 0;
     left: 0;
@@ -168,18 +169,39 @@ nav.navigation{
     object-fit: cover; /* Ensures the image fills the space without distortion */
   }
   
-  /* Example of post footer and header styles */
+  /*post footer and header styles */
   .post-header, .post-footer {
     padding: 15px;
   }
   
   .post-header {
+    position:relative;
     display:flex;
     gap:5px;
     background-color: black;
     
    
   }
+
+  .hover-profile{
+    visibility: hidden;
+    
+    position:absolute;
+    top:0;
+    bottom: 100px;
+    left: 25px;
+    width: 250px;
+    height:auto;
+    background-color:red;
+    z-index: 10;
+    opacity:0;
+
+  }
+
+  .post-header:hover .hover-profile {
+    visibility: visible; /* Show when hovering */
+    opacity: 1; /* Make it fully visible */
+}
   .post-header p:nth-of-type(2){
     margin-left: 60%;
     font-weight:bold;
@@ -236,6 +258,27 @@ nav.navigation{
     width:25px;
 
   }
+
+  header.header{
+    display:flex;
+    justify-content: space-between;
+    padding:10px;
+  }
+  .input-search{
+    margin-top: 40px;
+    display:flex;
+    gap:10px;
+  }
+  input{
+    height:30px;
+    border-radius:10px;
+    background-color: #363535;
+  }
+  footer.footer{
+    display:flex;
+    justify-content: space-around;
+
+  }
 /*show only icons on side bar and no suggested follows*/
 @media (min-width: 781px) and (max-width: 1162px)
 {}
@@ -289,7 +332,7 @@ shows suggested folows*/
  }
     
 
- .header, .footer{
+ header.header, footer.footer{
     display: none;
  }
 }

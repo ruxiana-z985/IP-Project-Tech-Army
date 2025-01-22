@@ -40,24 +40,44 @@ if (!sessionStorage.getItem('visited')) {
 
 //HEART/LIKE OR UNLIKE FUNCTIONALITY  
 const hearts = document.querySelectorAll(".heart-icon");
+const likes = document.querySelectorAll(".like-count");
 
-hearts.forEach(heart => {
+// Create a single counter for each like-count element
+const counters = Array.from(likes).map(() => likeCount());
+
+function likeCount() {
+    let count = 0;
+
+    return {
+        increment: function () {
+            return ++count;
+        },
+        decrement: function () {
+            return --count;
+        },
+    };
+}
+
+hearts.forEach((heart, index) => {
+    const counter = counters[index]; // Use the corresponding counter for each heart
+
     heart.addEventListener("click", function () {
-        const path = heart.querySelector("path"); // Select the path inside the svg
+        const path = heart.querySelector("path"); // Select the path inside the SVG
         const currentFill = path.getAttribute("fill");
-        
-        // Toggle the fill attribute between "red" and "none"
+
         if (currentFill === "red") {
             path.setAttribute("fill", "none");
             path.setAttribute("stroke", "white");
+            likes[index].textContent = counter.decrement(); // Update the specific like-count
         } else {
             path.setAttribute("fill", "red");
-            path.setAttribute("stroke","none");
-            
-
+            path.setAttribute("stroke", "none");
+            likes[index].textContent = counter.increment(); // Update the specific like-count
         }
     });
 });
+
+
 
 
 
