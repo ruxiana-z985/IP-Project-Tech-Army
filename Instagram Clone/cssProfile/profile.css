@@ -9,7 +9,6 @@ body {
 .profile-container {
     display: flex;
     flex-direction: column;
-    
     width: 100%;
 }
 
@@ -153,6 +152,7 @@ body {
     gap: 5px;
     padding: 15px;
     background-color: white;
+    margin-bottom: 70px;
 }
 
 .post img {
