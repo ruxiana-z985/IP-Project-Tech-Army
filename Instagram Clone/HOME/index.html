@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="icons/icons8-instagram.svg"
+      sizes="64x64"
+      type="image/svg+xml"
+    />
+    
+    <link rel="stylesheet" href="style.css" />
+    <title>Instagram</title>
+  </head>
+  <body>
+    <header class="header">
+      <div>
+      <img class="icon-insta" src="icons/instagram-text-icon.svg" alt="instagram logo" />
+      </div>
+      <div class="input-search">
+        <input type="search" placeholder="search accounts">
+        <img class="icons" src="icons/magnify.svg">
+        <img class="icons searchIcon" src="icons/heart-outline.svg" alt="notification">
+      </div>
+    </header>
+
+    <!--NAVIGATION SIDE BAR FOR DESKTOPS AND SIMILAR SCREEN SIZES-->
+    <nav id="nav-home" class="navigation">
+      <section class="instagram-logo">
+        <img class="icon-insta" src="icons/instagram-text-icon.svg" alt="instagram logo" />
+      </section>
+      <section class="nav-links">
+        <a href="#" data-sidebar="nav-home" class="nav-link">
+          <div class="img-flex">
+            <img class="icons" src="icons/home.svg" />
+            <p>Home</p>
+          </div>
+        </a>
+        <a href="#" data-sidebar="search" class="nav-link">
+          <div class="img-flex">
+            <img class="icons" src="icons/magnify.svg" />
+            <p>Search</p>
+          </div>
+        </a>
+        <a href="#" class="nav-link">
+          <div class="img-flex">
+            <img class="icons" src="icons/compass-outline.svg" />
+            <p>Explore</p>
+          </div>
+        </a>
+        <a href="#" class="nav-link">
+          <div class="img-flex">
+            <img class="icons" src="icons/icons8-instagram-reels.svg" />
+            <p>Reels</p>
+          </div>
+        </a>
+        <a href="#" class="nav-link">
+          <div class="img-flex">
+            <img class="icons" src="icons/icons8-message.svg" />
+            <p>Messages</p>
+          </div>
+        </a>
+        
+        <a href="#" data-sidebar="notification" class="nav-link">
+          <div id="notify-icon" class="img-flex">
+            <svg
+              class="side-heart"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="32"
+              height="32"
+              fill="none"
+            >
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                fill="none"
+                stroke="white"
+                stroke-width="1"
+              />
+            </svg>
+
+            <p>Notifications</p>
+          </div>
+        </a>
+        <a href="#" class="nav-link create">
+          <div class="img-flex">
+            <img class="icons" src="icons/more.svg"/>
+            <p>Create</p>
+          </div>
+        </a>
+        <a href="#" data-sidebar="messages" class="nav-link">
+          <div class="img-flex">
+            <img class="icons" src="icons/profile.png" />
+            <p>Profile</p>
+          </div>
+        </a>
+      </section>
+
+      <section class="extras">
+        <a href="#" class="nav-link">
+          <div class="img-flex">
+            <img class="icons" src="icons/menu.svg" />
+            <p>More</p>
+          </div>
+        </a>
+
+        <a href="#" class="nav-link">
+          <div class="img-flex">
+            <img class="icons" src="icons/threads.svg" />
+            <p>Threads</p>
+          </div>
+        </a>
+      </section>
+    </nav>
+
+
+    
+
+    <!--PANELS FOR NOTIFICATIONS-->
+    <dialog id="notification" class="notification panel">
+      <nav class="notifNav">
+        <section class="instagram-logo">
+          <img class="icons" src="icons/icons8-instagram.svg" alt="instagram logo" />
+        </section>
+        <section class="nav-links">
+          <a href="#" data-sidebar="nav-home" class="nav-link">
+            <div class="img-flex">
+              <img class="icons" src="icons/home.svg" />
+             
+            </div>
+          </a>
+          <a href="#" data-sidebar="search" class="nav-link">
+            <div class="img-flex">
+              <img class="icons" src="icons/magnify.svg" />
+              
+            </div>
+          </a>
+          <a href="#" class="nav-link">
+            <div class="img-flex">
+              <img class="icons" src="icons/compass-outline.svg" />
+              
+            </div>
+          </a>
+          <a href="#" class="nav-link">
+            <div class="img-flex">
+              <img class="icons" src="icons/icons8-instagram-reels.svg" />
+              
+            </div>
+          </a>
+          <a href="#" class="nav-link">
+            <div class="img-flex">
+              <img class="icons" src="icons/icons8-message.svg" />
+              
+            </div>
+          </a>
+          
+          <a href="#" data-sidebar="notification" class="nav-link">
+            <div id="notify-icon" class="img-flex">
+              <img class="icons" src="icons/heart-outline.svg">
+  
+              
+            </div>
+          </a>
+          <a href="#" class="nav-link create">
+            <div class="img-flex">
+              <img class="icons" src="icons/more.svg"/>
+              
+            </div>
+          </a>
+          <a href="#" data-sidebar="messages" class="nav-link">
+            <div class="img-flex">
+              <img class="icons" src="icons/profile.png" />
+              
+            </div>
+          </a>
+        </section>
+  
+        <section class="extras">
+          <a href="#" class="nav-link">
+            <div class="img-flex">
+              <img class="icons" src="icons/menu.svg" />
+              
+            </div>
+          </a>
+  
+          <a href="#" class="nav-link">
+            <div class="img-flex">
+              <img class="icons" src="icons/threads.svg" />
+              
+            </div>
+          </a>
+        </section>
+      </nav>
+      <div class="notifyMainContent">
+
+      <p><b>Notifications</b></p>
+      <p>New</p>
+      <div>
+        <img class="notifiedImage" src="images/sample profile pics/beauty-7471451_1280.jpg">
+        <p><b>yAsonia_123</b></p>
+        <button>Following</button>
+      </div>
+      </div>
+      
+      
+    </dialog>
+
+  <!--PANEL FOR SEARCH FUNCTIONALITY-->
+
+  <dialog id="search" class="search panel">
+
+    <nav class="searchNav">
+      <section class="instagram-logo">
+        <img class="icons" src="icons/icons8-instagram.svg" alt="instagram logo" />
+      </section>
+      <section class="nav-links">
+        <a href="#" data-sidebar="nav-home" class="nav-link">
+          <div class="img-flex">
+            <img class="icons" src="icons/home.svg" />
+           
+          </div>
+        </a>
+        <a href="#" data-sidebar="search" class="nav-link">
+          <div class="img-flex">
+            <img class="icons" src="icons/magnify.svg" />
+            
+          </div>
+        </a>
+        <a href="#" class="nav-link">
+          <div class="img-flex">
+            <img class="icons" src="icons/compass-outline.svg" />
+            
+          </div>
+        </a>
+        <a href="#" class="nav-link">
+          <div class="img-flex">
+            <img class="icons" src="icons/icons8-instagram-reels.svg" />
+            
+          </div>
+        </a>
+        <a href="#" class="nav-link">
+          <div class="img-flex">
+            <img class="icons" src="icons/icons8-message.svg" />
+            
+          </div>
+        </a>
+        
+        <a href="#" data-sidebar="notification" class="nav-link">
+          <div id="notify-icon" class="img-flex">
+            <img class="icons" src="icons/heart-outline.svg">
+
+            
+          </div>
+        </a>
+        <a href="#" class="nav-link create">
+          <div class="img-flex">
+            <img class="icons" src="icons/more.svg"/>
+            
+          </div>
+        </a>
+        <a href="#" data-sidebar="messages" class="nav-link">
+          <div class="img-flex">
+            <img class="icons" src="icons/profile.png" />
+            
+          </div>
+        </a>
+      </section>
+
+      <section class="extras">
+        <a href="#" class="nav-link">
+          <div class="img-flex">
+            <img class="icons" src="icons/menu.svg" />
+            
+          </div>
+        </a>
+
+        <a href="#" class="nav-link">
+          <div class="img-flex">
+            <img class="icons" src="icons/threads.svg" />
+            
+          </div>
+        </a>
+      </section>
+    </nav>
+    <div>
+      <header class="search-header">
+      <p><b>Search</b></p>
+      <input type="search" name="searchInput">
+    </header>
+
+    <main class="searchMain">
+      <div class="recentSearch">
+        <p><b>Recent</b></p>
+        <p><span style="color:blue">Clear all</span></p>
+      </div>
+
+      <div class="mainSearchContent">
+        <img class="searchedAccounts" src="images/sample profile pics/girl-4668620_1280.jpg">
+        <div>
+          <p>_the_123</p>
+          <p>Merphy planner</p>
+        </div>
+        
+      </div>
+
+      <div class="mainSearchContent">
+        <img class="searchedAccounts" src="images/sample profile pics/girl-4668620_1280.jpg">
+        <div>
+          <p>_the_123</p>
+          <p>Merphy planner</p>
+        </div>
+        
+      </div>
+
+
+      <div class="mainSearchContent">
+        <img class="searchedAccounts" src="images/sample profile pics/girl-4668620_1280.jpg">
+        <div>
+          <p>_the_123</p>
+          <p>Merphy planner</p>
+        </div>
+        
+      </div>
+    </main>
+    </div>
+    
+  </dialog>
+
+    <!--MAIN CONTENT-->
+    <main class="main">
+      <section class="empty"></section>
+      <section class="profilesAndPosts">
+        <section class="profiles">
+          <div class="profile-container">
+            <a class="p-img">
+              <img class="profile-pic" src="images/sample profile pics/cat-2869825_1280.jpg" />
+            </a>
+            <a class="p-img">
+              <img class="profile-pic" src="images/sample profile pics/doe-2836281_1280.jpg" />
+            </a>
+            <a class="p-img">
+              <img class="profile-pic" src="images/sample profile pics/man-6830588_1280.jpg" />
+            </a>
+            <a class="p-img">
+              <img class="profile-pic" src="images/sample profile pics/beauty-7471451_1280.jpg" />
+            </a>
+          </div>
+
+          <div class="suggestion-container">
+            <div class="suggest">
+              <p>X</p>
+              <a class="p-img">
+                <img class="profile-pic" src="images/sample profile pics/woman-1867715_1280.jpg" />
+              </a>
+              <p>Follow catherine_theGreat</p>
+            </div>
+
+            <div class="suggest">
+              <p>X</p>
+              <a class="p-img">
+                <img class="profile-pic" src="images/sample profile pics/woman-546103_1280.jpg" />
+              </a>
+              <p>Follow catherine_theGreat</p>
+            </div>
+
+            <div class="suggest">
+              <p>X</p>
+              <a class="p-img">
+                <img class="profile-pic" src="images/sample profile pics/girl-4668620_1280.jpg" />
+              </a>
+              <p>Follow catherine_theGreat</p>
+            </div>
+
+            <div class="suggest">
+              <p>X</p>
+              <a class="p-img">
+                <img class="profile-pic" src="images/sample profile pics/cat-318765_1280.jpg" />
+              </a>
+              <p>Follow catherine_theGreat</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="posts">
+          <article class="post">
+            <header class="post-header">
+              <img class="profile-pic" src="images/sample profile pics/ai-generated-8573655_1280.jpg" />
+              <p>username</p>
+              <p>...</p>
+              <div class="hover-profile">
+                <div class="hover-profile1">
+                  <img class="hoverProfile-pic" src="images/sample profile pics/ai-generated-8594846_1280.png">
+                  
+                  
+                </div>
+
+                <div class="hover-profile2">
+                    <div>
+                      <p>posts</p>
+                      <p>235</p>
+                    </div>
+                    <div>
+                      <p>followers</p>
+                      <p>235</p>
+                    </div>
+                    <div>
+                      <p>following</p>
+                      <p>235</p>
+                    </div>
+                </div>
+
+                <div class="hover-profile3">
+                  <div>
+                    <img src="images/posts/photo_4_2024-11-28_14-35-14.jpg">
+                  </div>
+                  <div>
+                    <img src="images/sample profile pics/girl-4668620_1280.jpg">
+                  </div>
+                  <div>
+                    <img src="images/sample profile pics/portrait-657116_1280.jpg">
+                  </div>
+                  
+                </div>
+
+                <div class="hover-profile4">
+                  <div>
+                    <img class="hover-icon" src="icons/icons8-message.svg">
+                    <p>Message</p>
+                  </div>
+                  <div>Following</div>
+                </div>
+              </div>
+            </header>
+            <div class="post-image">
+              <img class="post-pic" src="images/posts/photo_11_2024-11-28_14-35-14.jpg" />
+            </div>
+
+            <footer class="post-footer">
+              <div>
+                <svg
+              class="heart-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="32"
+              height="32"
+              fill="none"
+            >
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                fill="none"
+                stroke="white"
+                stroke-width="1"
+              />
+            </svg>
+              <img class="icons" src="icons/icons8-message.svg" />
+              <img class="icons" src="icons/icons8-telegram-app.svg" />
+              
+              </div>
+              
+              <img class="icons" src="icons/icons8-bookmark.svg" />
+            </footer>
+            <p class="like-count"></p>
+            <p class="post-caption">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam asperiores omnis, aperiam fugit magnam eos veniam, repellendus doloremque non provident blanditiis sint iure temporibus 
+              excepturi laborum illum autem voluptates eaque.
+            </p>
+          </article>
+          <article class="post">
+            <header class="post-header">
+              <img class="profile-pic" src="images/sample profile pics/cat-318765_1280.jpg" />
+              <p>username</p>
+              <p>...</p>
+              <div class="hover-profile">
+                
+              </div>
+            </header>
+            <div class="post-image">
+              <video controls>
+                <source src="videos/133829-758327963_tiny.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            
+            </div>
+
+            <footer class="post-footer">
+              <div>
+                <svg
+              class="heart-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="32"
+              height="32"
+              fill="none"
+            >
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                fill="none"
+                stroke="white"
+                stroke-width="1"
+              />
+            </svg>
+              <img class="icons" src="icons/icons8-message.svg" />
+              <img class="icons" src="icons/icons8-telegram-app.svg" />
+              
+              </div>
+
+             
+              <img class="icons" src="icons/icons8-bookmark.svg" />
+              
+            </footer>
+            <p class="like-count"></p>
+            <p class="post-caption">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam asperiores omnis, aperiam fugit magnam eos veniam, repellendus doloremque non provident blanditiis sint iure temporibus 
+              excepturi laborum illum autem voluptates eaque.
+            </p>
+          </article>
+
+          <article class="post">
+            <header class="post-header">
+              <img class="profile-pic" src="images/sample profile pics/beauty-7471451_1280.jpg" />
+              <p>username</p>
+              <p>...</p>
+              <div class="hover-profile">
+                <div class="hover-profile1">
+                  <img class="hoverProfile-pic" src="images/sample profile pics/ai-generated-8594846_1280.png">
+                  
+                  
+                </div>
+
+                <div class="hover-profile2">
+                    <div>
+                      <p>posts</p>
+                      <p>235</p>
+                    </div>
+                    <div>
+                      <p>followers</p>
+                      <p>235</p>
+                    </div>
+                    <div>
+                      <p>following</p>
+                      <p>235</p>
+                    </div>
+                </div>
+
+                <div class="hover-profile3">
+                  <div>
+                    <img src="images/posts/photo_4_2024-11-28_14-35-14.jpg">
+                  </div>
+                  <div>
+                    <img src="images/sample profile pics/girl-4668620_1280.jpg">
+                  </div>
+                  <div>
+                    <img src="images/sample profile pics/portrait-657116_1280.jpg">
+                  </div>
+                  
+                </div>
+
+                <div class="hover-profile4">
+                  <div>
+                    <img class="hover-icon" src="icons/icons8-message.svg">
+                    <p>Message</p>
+                  </div>
+                  <div>Following</div>
+                </div>
+              </div>
+            </header>
+            <div class="post-image">
+              <img class="post-pic" src="images/posts/photo_14_2024-11-28_14-35-14.jpg" />
+            </div>
+
+            <footer class="post-footer">
+              <div>
+                <svg
+              class="heart-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="32"
+              height="32"
+              fill="none"
+            >
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                fill="none"
+                stroke="white"
+                stroke-width="1"
+              />
+            </svg>
+              <img class="icons" src="icons/icons8-message.svg" />
+              <img class="icons" src="icons/icons8-telegram-app.svg" />
+              
+              </div>
+              <img class="icons" src="icons/icons8-bookmark.svg" />
+             
+            </footer>
+            <p class="like-count"></p>
+            <p class="post-caption">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam asperiores omnis, aperiam fugit magnam eos veniam, repellendus doloremque non provident blanditiis sint iure temporibus 
+              excepturi laborum illum autem voluptates eaque.
+            </p>
+          </article>
+
+          <article class="post">
+            <header class="post-header">
+              <img class="profile-pic" src="images/sample profile pics/girl-4668620_1280.jpg" />
+              <p>username</p>
+              <p>...</p>
+              <div class="hover-profile">
+                <div class="hover-profile1">
+                  <img class="hoverProfile-pic" src="images/sample profile pics/ai-generated-8594846_1280.png">
+                  
+                  
+                </div>
+
+                <div class="hover-profile2">
+                    <div>
+                      <p>posts</p>
+                      <p>235</p>
+                    </div>
+                    <div>
+                      <p>followers</p>
+                      <p>235</p>
+                    </div>
+                    <div>
+                      <p>following</p>
+                      <p>235</p>
+                    </div>
+                </div>
+
+                <div class="hover-profile3">
+                  <div>
+                    <img src="images/posts/photo_4_2024-11-28_14-35-14.jpg">
+                  </div>
+                  <div>
+                    <img src="images/sample profile pics/girl-4668620_1280.jpg">
+                  </div>
+                  <div>
+                    <img src="images/sample profile pics/portrait-657116_1280.jpg">
+                  </div>
+                  
+                </div>
+
+                <div class="hover-profile4">
+                  <div>
+                    <img class="hover-icon" src="icons/icons8-message.svg">
+                    <p>Message</p>
+                  </div>
+                  <div>Following</div>
+                </div>
+              </div>
+            </header>
+            <div class="post-image">
+              <img class="post-pic" src="images/posts/photo_4_2024-11-28_14-34-43.jpg" />
+            </div>
+
+            <footer class="post-footer">
+              <div>
+                <svg
+              class="heart-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="32"
+              height="32"
+              fill="none"
+            >
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                fill="none"
+                stroke="white"
+                stroke-width="1"
+              />
+            </svg>
+              <img class="icons" src="icons/icons8-message.svg" />
+            
+              <img class="icons" src="icons/icons8-telegram-app.svg" />
+              </div>
+              <img class="icons" src="icons/icons8-bookmark.svg" />
+              
+            </footer>
+            <p class="like-count"></p>
+            <p class="post-caption">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam asperiores omnis, aperiam fugit magnam eos veniam, repellendus doloremque non provident blanditiis sint iure temporibus 
+              excepturi laborum illum autem voluptates eaque.
+            </p>
+          </article>
+        </section>
+      </section>
+    </main>
+
+
+    <!--A SIDE PANEL FOR SUGGESTED PROFILES-->
+    <aside class="suggested-profiles">
+      <div class="suggested-profile">
+        <img class="profile-pic" src="images/sample profile pics/doe-2836281_1280.jpg" />
+        <p>the_doe_polka</p>
+        <img class="verification-badge" src="icons/icons8-instagram-verification-badge.svg" />
+      </div>
+
+      <div class="suggested-profile">
+        <img class="profile-pic" src="images/sample profile pics/ai-generated-8594846_1280.png" />
+        <p>hellvaria_theGreat</p>
+        <img class="verification-badge" src="icons/icons8-instagram-verification-badge.svg" />
+      </div>
+
+      <div class="suggested-profile">
+        <img class="profile-pic" src="images/sample profile pics/portrait-657116_1280.jpg" />
+        <p>tinaz_pihcho</p>
+        <img class="verification-badge" src="icons/icons8-instagram-verification-badge.svg" />
+      </div>
+
+      <div class="suggested-profile">
+        <img class="profile-pic" src="images/sample profile pics/doe-2836281_1280.jpg" />
+        <p>the_doe_polka</p>
+        <img class="verification-badge" src="icons/icons8-instagram-verification-badge.svg" />
+      </div>
+
+      <div class="suggested-profile">
+        <img class="profile-pic" src="images/sample profile pics/doe-2836281_1280.jpg" />
+        <p>the_doe_polka</p>
+        <img class="verification-badge" src="icons/icons8-instagram-verification-badge.svg" />
+      </div>
+    </aside>
+
+    <footer class="footer">
+      <a href="#" data-sidebar="nav-home" class="nav-link">
+        
+          <img class="icons" src="icons/home.svg" />
+         
+        
+      </a>
+
+      <a href="#" data-sidebar="nav-home" class="nav-link">
+        
+          <img class="icons" src="icons/compass-outline.svg" />
+          
+     
+      </a>
+
+      <a href="#" data-sidebar="nav-home" class="nav-link">
+       
+          <img class="icons" src="icons/icons8-instagram-reels.svg" />
+          
+      </a>
+      <a href="#" data-sidebar="nav-home" class="nav-link  create">
+        
+          <img class="icons" src="icons/more.svg" />
+          
+      </a>
+      <a href="#" data-sidebar="nav-home" class="nav-link">
+        
+          <img class="icons" src="icons/icons8-message.svg" />
+         
+      </a>
+      <a href="#" data-sidebar="nav-home" class="nav-link">
+        
+          <img class="icons" src="icons/profile.png" />
+         
+      </a>
+
+
+
+    </footer>
+
+    <dialog id="dialog">
+      <div class="dialog-cancel">X</div>
+      <div class="dialog-flex">
+        <div class="drag_post">
+          <p>Create New Post</p>
+          <div>
+            <img src="icons/icons8-upload-100 (1).svg" />
+            <p>Drag and Drop Photos and Videos Here</p>
+            <button>Upload</button>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
