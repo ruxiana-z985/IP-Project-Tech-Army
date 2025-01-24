@@ -331,15 +331,17 @@ nav.navigation{
  }
  
 
-dialog.search[open]{
+dialog.search[open], dialog.notification[open]{
   display: flex;
 }
-dialog.search {
+dialog.search, dialog.notification{
   flex-direction: row;
   overflow-y: scroll;
   overflow-x: hidden;
 }
-dialog.search nav.searchNav{
+dialog.search nav.searchNav,
+dialog.notification nav.notifNav
+{
    width:3vw;
    display:flex;
    flex-direction: column;
@@ -348,14 +350,32 @@ dialog.search nav.searchNav{
    padding-bottom:10px;
 }
 
-nav.searchNav .nav-links{
+nav.searchNav .nav-links,
+nav.notifNav .nav-links
+{
   display:flex;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ay:flex;
   flex-direction: column;
   gap:25px;
 }
-dialog.search > div{
+dialog.search > div,
+dialog.notification > div
+
+{
   display:flex;
   flex-direction: column;
+  width:100%;
+}
+
+dialog.notification > div > div{
+  display:flex;
+  justify-content: space-evenly;
+}
+.notifyMainContent div button{
+  max-height:35px;
+  border-radius: 15px;
+  background-color: rgb(70, 69, 69);
+  color:white;
+  margin-top:15px;
 }
 dialog.search header.search-header {
   display: none; 
@@ -391,11 +411,17 @@ main.searchMain{
   padding-right:5px;
   color: white;
 }
-main .mainSearchContent img.searchedAccounts {
+main .mainSearchContent img.searchedAccounts,
+div.notifyMainContent  img.notifiedImage
+{
   height: 50px;
   width: 50px;
   border-radius: 50%;
 } 
+dialog.notification{
+  color:white;
+}
+
 main.searchMain .recentSearch{
   display:flex;
   justify-content: space-between;
