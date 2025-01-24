@@ -1,6 +1,6 @@
-Title: Instagram clone
+Title: Instagram 
 
-Group: Tech Army
+Group: 4
 
 Group Members:
 
