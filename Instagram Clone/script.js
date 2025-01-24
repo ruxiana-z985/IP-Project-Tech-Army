@@ -112,6 +112,28 @@ dialog_cancel.addEventListener("click", function(){
 
 
 
+const imageChange = document.querySelectorAll('img[src="icons/instagram-text-icon.svg"]');
+
+
+window.addEventListener('resize', function () {
+    const windowWidth = window.innerWidth;
+  
+    imageChange.forEach(element => {
+      if (windowWidth < 1266 && windowWidth > 1163) {
+        element.src = "icons/icons8-instagram.svg";
+        element.style.height = "50px"; // Apply new height
+        element.style.width = "50px";  // Apply new width
+      } else {
+        element.src = "icons/instagram-text-icon.svg";
+        element.style.height = ""; // Reset to default
+        element.style.width = "";  // Reset to default
+      }
+    });
+  });
+  
+
+
+
 
 
 

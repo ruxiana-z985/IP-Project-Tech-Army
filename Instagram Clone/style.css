@@ -522,14 +522,69 @@ main.searchMain .mainSearchContent > div{
   }
 /*show only icons on side bar and no suggested follows*/
 @media (min-width: 781px) and (max-width: 1162px)
-{}
+{
+  
+
+
+}
 
 
 /*this is for the part
 where the navbar only shows icons and also 
 shows suggested folows*/
 @media (min-width: 1163px) and (max-width: 1266px){
+  body{
+    display:grid;
+    grid-template-columns: 5vw 95vw ;
+    max-width: 100vw;
+    max-height:100vh;
+    overflow-x: hidden;
+ }
+ #nav-home{
+    display:flex;
+ }
+ #nav-home .nav-links a div p,
+ #nav-home .extras a div p
+ {
+   display: none;
+ }
+ #nav-home{
+    grid-column:1/2;
+    width:5vw;
+    height: 100%;
+    margin-left:2%;
+    font-size:1rem;
+ }
+  
+ #nav-home .nav-links{
+   display:flex;
+   flex-direction: column;
+   gap: 15px;
+ }
+ main.main{
+    grid-column: 2/3;
+    height: 100%;
+    max-width: 85vw;
 
+ }
+
+ aside.suggested-profiles{
+    display:none;
+    
+ }
+ .posts{
+  width:60%;
+ }
+ .post{
+    width: 100%;
+    max-width: 600px; /* Limit the max width of posts */
+    margin: 20px auto;
+ }
+    
+
+ header.header, footer.footer{
+    display: none;
+ }
 }
 @media (min-width: 1267px){
  body{
