@@ -1,1 +1,79 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #1e1e1e;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Header Section */
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Start Button */
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+button:active {
+    transform: scale(1);
+}
+
+/* Canvas (Game Area) */
+#tetris {
+    background-color: #222;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    border: 5px solid #333;
+}
+
+/* Grid Cells and Falling Pieces */
+canvas {
+    border-radius: 8px;
+}
+
+/* Animation for New Game */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+body {
+    animation: fadeIn 0.5s ease-out;
+}
