@@ -70,7 +70,7 @@ taggedPostsTab.addEventListener('click', () => {
 const footerIcons = document.querySelectorAll('.footer .icon img');
 footerIcons.forEach((icon, index) => {
     icon.addEventListener('click', () => {
-        const pages = ['home.html', 'search.html', 'reels.html', 'notifications.html', 'profile.html'];
+        const pages = ['index.html', 'search.html', 'reels.html', 'notifications.html', 'profile.html'];
         window.location.href = pages[index];
     });
 });
