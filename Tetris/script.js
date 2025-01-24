@@ -238,5 +238,4 @@ document.addEventListener("keydown", function (e) {
     rotate();
   }
 });
-let score = 0;
-let gameInterval = null;
+
