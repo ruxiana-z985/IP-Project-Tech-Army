@@ -326,6 +326,30 @@ nav.navigation{
   display:flex;
  }
  
+dialog.search {
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+dialog.search header.search-header {
+  display: none; 
+}
+
+/* dialog.search main.searchMain {
+  display: none; 
+} */
+
+dialog.search[open] header.search-header {
+  display: flex; 
+ 
+}
+header.search-header{
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+
  .suggested-profiles{
   display:none;
   flex-direction: column;
