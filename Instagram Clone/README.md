@@ -10,4 +10,4 @@ Group Members:
 | Rediet Geremew      | ETS1137/15     |  
 | Redeat Birhane      | ETS1130/15     |  
 | Sosena Gossaye      | ETS1270/15     |  
-| Yadiel Daniel       | ETS1357/15     |
+| Yadiel Daniel      | ETS1357/15     |
