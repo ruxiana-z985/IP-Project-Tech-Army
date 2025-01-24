@@ -91,9 +91,12 @@ main.main{
  
  .profile-pic{
   cursor:pointer;
-  border-radius:50%;
-  height:70px;
-  width:70px;
+  height: 70px;
+  width: 70px;
+  border: 3px solid transparent;
+  border-radius: 50px;
+  background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4, #405DE6) border-box; /* Gradient background */
+  background-clip: border-box; 
   
 }
 .post-caption, .like-count{
@@ -131,6 +134,7 @@ nav.navigation{
     top:0;
     left:0;
     bottom:0;
+    border-right:1px solid rgba(245, 237, 237, 0.171);
 }
 .img-flex{
     display: flex;
@@ -336,6 +340,9 @@ dialog.search header.search-header {
   display: none; 
 }
 
+dialog.search main.searchMain {
+  display: none; 
+} 
 /* dialog.search main.searchMain {
   display: none; 
 } */
@@ -344,11 +351,27 @@ dialog.search[open] header.search-header {
   display: flex; 
  
 }
+dialog.search[open]  main.searchMain {
+  display: flex; 
+ 
+}
 header.search-header{
   flex-direction: column;
   justify-content: space-around;
+  height: calc(100% / 4);
 
 }
+
+main.searchMain{
+  flex-direction: column;
+  padding-left:5px;
+  padding-right:5px;
+}
+main .mainSearchContent img.searchedAccounts {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+} 
 
  .suggested-profiles{
   display:none;
