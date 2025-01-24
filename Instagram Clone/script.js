@@ -119,7 +119,7 @@ window.addEventListener('resize', function () {
     const windowWidth = window.innerWidth;
   
     imageChange.forEach(element => {
-      if (windowWidth < 1266 && windowWidth > 1163) {
+      if (windowWidth < 1266 && windowWidth >768) {
         element.src = "icons/icons8-instagram.svg";
         element.style.height = "50px"; // Apply new height
         element.style.width = "50px";  // Apply new width

@@ -520,19 +520,27 @@ main.searchMain .mainSearchContent > div{
     justify-content: space-around;
 
   }
-/*show only icons on side bar and no suggested follows*/
-@media (min-width: 781px) and (max-width: 1162px)
-{
-  
 
 
-}
+
+  .input-search .icons.searcIcon{
+      display:none;
+  }
+
 
 
 /*this is for the part
 where the navbar only shows icons and also 
 shows suggested folows*/
-@media (min-width: 1163px) and (max-width: 1266px){
+@media (max-width:399px){
+  .input-search input[type="search"]{
+    display:none;
+  }
+  .input-search .icons.searcIcon{
+    display:block;
+}
+}
+@media (min-width: 763px) and (max-width: 1266px){
   body{
     display:grid;
     grid-template-columns: 5vw 95vw ;
