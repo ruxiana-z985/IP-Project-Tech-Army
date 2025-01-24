@@ -136,13 +136,88 @@
   <!--PANEL FOR SEARCH FUNCTIONALITY-->
 
   <dialog id="search" class="search panel">
-    <header class="search-header">
+
+    <nav class="searchNav">
+      <section class="instagram-logo">
+        <img class="icons" src="icons/icons8-instagram.svg" alt="instagram logo" />
+      </section>
+      <section class="nav-links">
+        <a href="#" data-sidebar="nav-home" class="nav-link">
+          <div class="img-flex">
+            <img class="icons" src="icons/home.svg" />
+           
+          </div>
+        </a>
+        <a href="#" data-sidebar="search" class="nav-link">
+          <div class="img-flex">
+            <img class="icons" src="icons/magnify.svg" />
+            
+          </div>
+        </a>
+        <a href="#" class="nav-link">
+          <div class="img-flex">
+            <img class="icons" src="icons/compass-outline.svg" />
+            
+          </div>
+        </a>
+        <a href="#" class="nav-link">
+          <div class="img-flex">
+            <img class="icons" src="icons/icons8-instagram-reels.svg" />
+            
+          </div>
+        </a>
+        <a href="#" class="nav-link">
+          <div class="img-flex">
+            <img class="icons" src="icons/icons8-message.svg" />
+            
+          </div>
+        </a>
+        
+        <a href="#" data-sidebar="notification" class="nav-link">
+          <div id="notify-icon" class="img-flex">
+            <img class="icons" src="icons/heart-outline.svg">
+
+            
+          </div>
+        </a>
+        <a href="#" class="nav-link">
+          <div class="img-flex">
+            <img class="icons" src="icons/more.svg"/>
+            
+          </div>
+        </a>
+        <a href="#" data-sidebar="messages" class="nav-link">
+          <div class="img-flex">
+            <img class="icons" src="icons/profile.png" />
+            
+          </div>
+        </a>
+      </section>
+
+      <section class="extras">
+        <a href="#" class="nav-link">
+          <div class="img-flex">
+            <img class="icons" src="icons/menu.svg" />
+            
+          </div>
+        </a>
+
+        <a href="#" class="nav-link">
+          <div class="img-flex">
+            <img class="icons" src="icons/threads.svg" />
+            
+          </div>
+        </a>
+      </section>
+    </nav>
+    <div>
+      <header class="search-header">
       <p><b>Search</b></p>
       <input type="search" name="searchInput">
     </header>
 
     <main class="searchMain">
-      <div>
+      <div class="recentSearch">
         <p><b>Recent</b></p>
         <p><span style="color:blue">Clear all</span></p>
       </div>
@@ -155,7 +230,28 @@
         </div>
         
       </div>
+
+      <div class="mainSearchContent">
+        <img class="searchedAccounts" src="images/sample profile pics/girl-4668620_1280.jpg">
+        <div>
+          <p>_the_123</p>
+          <p>Merphy planner</p>
+        </div>
+        
+      </div>
+
+
+      <div class="mainSearchContent">
+        <img class="searchedAccounts" src="images/sample profile pics/girl-4668620_1280.jpg">
+        <div>
+          <p>_the_123</p>
+          <p>Merphy planner</p>
+        </div>
+        
+      </div>
     </main>
+    </div>
+    
   </dialog>
 
     <!--MAIN CONTENT-->
@@ -232,11 +328,11 @@
                       <p>235</p>
                     </div>
                     <div>
-                      <p>posts</p>
+                      <p>followers</p>
                       <p>235</p>
                     </div>
                     <div>
-                      <p>posts</p>
+                      <p>following</p>
                       <p>235</p>
                     </div>
                 </div>

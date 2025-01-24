@@ -151,7 +151,7 @@ nav.navigation{
     max-width:100%; /* Limit the max width of posts */
     margin: 20px auto; /* Center the post */
     
-    border: 1px solid #ffffff65;
+    border-top: 1px solid #ffffff65;
     border-radius: 10px;
     overflow: hidden; /* Ensures that content inside is contained */
   }
@@ -330,12 +330,33 @@ nav.navigation{
   display:flex;
  }
  
+
+dialog.search[open]{
+  display: flex;
+}
 dialog.search {
-  flex-direction: column;
+  flex-direction: row;
   overflow-y: scroll;
   overflow-x: hidden;
 }
+dialog.search nav.searchNav{
+   width:3vw;
+   display:flex;
+   flex-direction: column;
+   justify-content: space-between;
+   padding-top:10px;
+   padding-bottom:10px;
+}
 
+nav.searchNav .nav-links{
+  display:flex;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ay:flex;
+  flex-direction: column;
+  gap:25px;
+}
+dialog.search > div{
+  display:flex;
+  flex-direction: column;
+}
 dialog.search header.search-header {
   display: none; 
 }
@@ -359,19 +380,36 @@ header.search-header{
   flex-direction: column;
   justify-content: space-around;
   height: calc(100% / 4);
+  color: white;
 
 }
 
 main.searchMain{
   flex-direction: column;
+  gap:5px;
   padding-left:5px;
   padding-right:5px;
+  color: white;
 }
 main .mainSearchContent img.searchedAccounts {
   height: 50px;
   width: 50px;
   border-radius: 50%;
 } 
+main.searchMain .recentSearch{
+  display:flex;
+  justify-content: space-between;
+}
+
+main.searchMain .mainSearchContent{
+   display:flex;
+   color: white;
+}
+
+main.searchMain .mainSearchContent > div{
+  display: flex;
+
+}
 
  .suggested-profiles{
   display:none;
