@@ -90,6 +90,7 @@ main.main{
     display:none; }
  
  .profile-pic{
+  cursor:pointer;
   border-radius:50%;
   height:70px;
   width:70px;
@@ -191,14 +192,15 @@ nav.navigation{
     bottom: 100px;
     left: 25px;
     width: 250px;
-    height:auto;
+
+    height:400px;
     background-color:red;
     z-index: 10;
     opacity:0;
 
   }
 
-  .post-header:hover .hover-profile {
+  .post-header > img:hover ~ .hover-profile {
     visibility: visible; /* Show when hovering */
     opacity: 1; /* Make it fully visible */
 }
