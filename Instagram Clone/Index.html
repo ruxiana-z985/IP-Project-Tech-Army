@@ -3,30 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="insta-login.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet">
-    <title>Insta Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <title>Instagram Login</title>
 </head>
 <body>
     <main>
-        <img src="phones.png" alt="" class="phoneImg">
-        <div  class="form-div">
+        <!-- Phone Mockup -->
+        <div class="phone-container">
+            <img src="phones.png" alt="Phone Mockup" class="phoneImg">
+        </div>
+
+        <!-- Login Form -->
+        <div class="form-container">
             <form>
-                <img src="logo.png" alt="logo" class="instaLogo">
-                <input type="text" class="input" placeholder="phone number,username,or email" required>
-                <input type="password" class="input" placeholder="password" required>
+                <img src="logo.png" alt="Instagram Logo" class="logo">
+                <input type="text" class="input" placeholder="Phone number, username, or email" required>
+                <input type="password" class="input" placeholder="Password" required>
                 <button class="login-btn">Log In</button>
-                <p id="or">or</p>
-                <a href="#" class="fb-login"><i class='bx bxl-facebook-square'></i>Log in with Facebook</a>
+                <p id="or">OR</p>
+                <a href="#" class="facebook-login">
+                    <i class='bx bxl-facebook-square'></i> Log in with Facebook
+                </a>
             </form>
+
+            <!-- Sign-Up Section -->
             <div class="sign-up">
-               <p class="sign-link">Don't have an account?<a href="#" class="sign-link">Sign Up</a></p>
+                <p>Don't have an account? <a href="#">Sign up</a></p>
             </div>
+
+            <!-- Get the App Section -->
             <div class="get-app">
                 <p>Get the app</p>
-                <div class="store">
-                    <img src="applestore.png" alt="" id="play">
-                    <img src="googlestore.png" alt="" id="microsoft">
+                <div class="store-buttons">
+                    <img src="applestore.png" alt="Apple Store">
+                    <img src="googlestore.png" alt="Google Play">
                 </div>
             </div>
         </div>
