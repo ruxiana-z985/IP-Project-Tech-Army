@@ -544,9 +544,7 @@ main.searchMain .mainSearchContent > div > p:nth-of-type(2){font-size:0.7rem;}
 
 
 
-/*this is for the part
-where the navbar only shows icons and also 
-shows suggested folows*/
+
 @media (max-width:399px){
   .input-search input[type="search"]{
     display:none;
@@ -565,8 +563,8 @@ shows suggested folows*/
   display:none;
 }
 .post-footer div svg.heart-icon{
-  height:30px;
-  width:30px;
+  height:35%;
+  width:10%;
 }
 .profile-pic{
   height:80px;
@@ -574,7 +572,8 @@ shows suggested folows*/
 }
 .post-header .profile-pic{
   border-radius:100%;
-  height:30px;
+  height:35px;
+  width:35px;
 }
 .profile-container{
   max-width:90%;
@@ -583,6 +582,10 @@ shows suggested folows*/
 .post-footer{
   padding-left:5%;
   padding-right:5%;
+}
+.post-header > img:hover ~ .hover-profile {
+  visibility:hidden; /* Show when hovering */
+  opacity: 0; /* Make it fully visible */
 }
 }
 
