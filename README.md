@@ -1,4 +1,4 @@
-[1.Instagram Clone Live Demo](https://ornate-malasada-55fc27.netlify.app/)
+[1.Instagram Clone Live Demo](https://instacloningbytecharmies.netlify.app/)
 
 
 
