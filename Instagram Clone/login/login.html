@@ -3,24 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="../login/login.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <title>Instagram Login</title>
+    <link
+      rel="icon"
+      href="../HOME/icons/Colorinstagram (1).svg"
+      sizes="64x64"
+      type="image/svg+xml"
+    />
+    <script src="login.js" defer></script>
+    <title>Instagram</title>
 </head>
 <body>
     <main>
         <!-- Phone Mockup -->
         <div class="phone-container">
-            <img src="phones.png" alt="Phone Mockup" class="phoneImg">
+            <img src="../images/phones.png" alt="Phone Mockup" class="phoneImg">
         </div>
 
         <!-- Login Form -->
         <div class="form-container">
             <form>
-                <img src="logo.png" alt="Instagram Logo" class="logo">
+                <img src="../images/logo.png" alt="Instagram Logo" class="logo">
                 <input type="text" class="input" placeholder="Phone number, username, or email" required>
                 <input type="password" class="input" placeholder="Password" required>
-                <button class="login-btn">Log In</button>
+                <button class="login-btn" type="submit">Log In</button>
                 <p id="or">OR</p>
                 <a href="#" class="facebook-login">
                     <i class='bx bxl-facebook-square'></i> Log in with Facebook
@@ -36,8 +43,8 @@
             <div class="get-app">
                 <p>Get the app</p>
                 <div class="store-buttons">
-                    <img src="applestore.png" alt="Apple Store">
-                    <img src="googlestore.png" alt="Google Play">
+                    <img src="../images/applestore.png" alt="Apple Store">
+                    <img src="../images/googlestore.png" alt="Google Play">
                 </div>
             </div>
         </div>

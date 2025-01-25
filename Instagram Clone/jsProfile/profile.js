@@ -5,7 +5,7 @@ const accountSwitch = document.querySelector('.account-switch select');
 accountSwitch.addEventListener('change', (event) => {
     const confirmSwitch = confirm("Are you sure you want to switch accounts?");
     if (confirmSwitch) {
-        window.location.href = "login.html"; // Redirect to login page
+        window.location.href = "../login/login.html"; // Redirect to login page
     } else {
         event.target.value = event.target.dataset.current;
     }
@@ -23,8 +23,7 @@ profileStats.forEach((stat) => {
     stat.addEventListener('click', (event) => {
         const type = event.target.dataset.type; // posts, followers, following
         if (type) {
-            alert(`Redirecting to ${type} page...`); // Debugging purposes
-            // Example navigation: window.location.href = `${type}.html`;
+            alert(`Redirecting to ${type} page...`); 
         }
     });
 });
@@ -80,12 +79,12 @@ const instaIcon=document.querySelector('.iconInsta');
 window.addEventListener('resize', function(){
     const windowWidth=this.window.innerWidth;
     if(windowWidth > 769 && windowWidth < 1266){
-        instaIcon.src="assetsProfile/icons/icons8-instagram.svg";
+        instaIcon.src="../assetsProfile/icons/icons8-instagram.svg";
         instaIcon.style.height="35px";
         instaIcon.style.width="35px";
     }
     else{
-        instaIcon.src="assetsProfile/icons/instagram-text-icon.svg";
+        instaIcon.src="../assetsProfile/icons/instagram-text-icon.svg";
         instaIcon.style.height="70px";
         instaIcon.style.width="100px";
     }
