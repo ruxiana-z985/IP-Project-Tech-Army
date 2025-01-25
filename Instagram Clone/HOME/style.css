@@ -555,28 +555,35 @@ shows suggested folows*/
     display:block;
 }
 .post-caption{
-  font-size:0.6rem;
+  font-size:0.9rem;
 }
 .icons{
-  height:20px;
-  width:20px;
+  height:30px;
+  width:30px;
 }
 .suggestion-container{
   display:none;
 }
 .post-footer div svg.heart-icon{
-  height:20px;
-  width:20px;
+  height:30px;
+  width:30px;
 }
 .profile-pic{
-  height:40px;
-  width:40px;
+  height:80px;
+  width:80px;
 }
 .post-header .profile-pic{
   border-radius:100%;
   height:30px;
 }
-
+.profile-container{
+  max-width:90%;
+  overflow-x: auto;
+}
+.post-footer{
+  padding-left:5%;
+  padding-right:5%;
+}
 }
 
 @media (min-width: 763px) and (max-width: 1266px){
