@@ -134,7 +134,24 @@ window.addEventListener('resize', function () {
 
 
 
+  const mobileNotification = document.querySelector('.notiIcon');
 
+  mobileNotification.addEventListener('click', function () {
+    const windowWidth = window.innerWidth;
+    if (windowWidth < 768) {
+      window.location.href = "../notification/index.html";
+    }
+  });
+  
+
+
+  const mobileProfile=document.querySelector('.profIcon');
+  mobileProfile.addEventListener('click',function(){
+    const windowWidth=window.innerWidth;
+    if(windowWidth < 768){
+        window.location.href="../profile.html";
+    }
+  });
 
 
 
