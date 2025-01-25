@@ -1,4 +1,4 @@
-[1.Instagram Clone Live Demo](https://instacloningbytecharmies.netlify.app/)
+[1.Instagram Clone Live Demo](https://instaclonedbytecharmy.netlify.app/)
 
 
 
