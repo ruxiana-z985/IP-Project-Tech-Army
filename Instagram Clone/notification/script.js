@@ -4,8 +4,8 @@ followButtons.forEach(button => {
   button.addEventListener('click', () => {
     if (button.textContent === 'Follow') {
       button.textContent = 'Following';
-      button.style.background = "rgb(239, 239, 239)";
-      button.style.color = "black";
+      button.style.background = "rgb(59, 58, 58)";
+      button.style.color = "white";
     } else {
       button.textContent = 'Follow';
       button.style.background = "";  // Revert to default background color
