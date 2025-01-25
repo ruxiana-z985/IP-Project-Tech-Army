@@ -3,7 +3,7 @@
 if (!sessionStorage.getItem('visited')) {
     // If it's the first time, redirect to load.html
     sessionStorage.setItem('visited', 'true');
-    window.location.href = 'loading_page/load.html';
+    window.location.href = '../Instagram Clone/HOME/loading_page/load.html';
   }
 
 
@@ -139,7 +139,7 @@ window.addEventListener('resize', function () {
   mobileNotification.addEventListener('click', function () {
     const windowWidth = window.innerWidth;
     if (windowWidth < 768) {
-      window.location.href = "../notification/index.html";
+      window.location.href = "../Instagram Clone/notification/index.html";
     }
   });
   
