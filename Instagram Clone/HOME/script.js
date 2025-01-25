@@ -3,7 +3,7 @@
 if (!sessionStorage.getItem('visited')) {
     // If it's the first time, redirect to load.html
     sessionStorage.setItem('visited', 'true');
-    window.location.href = '../Instagram Clone/HOME/loading_page/load.html';
+    window.location.href = 'HOME/loading_page/load.html';
   }
 
 
@@ -129,7 +129,7 @@ dialog_cancel.addEventListener("click", function(){
 
 
 
-const imageChange = document.querySelectorAll('img[src="../Instagram Clone/HOME/icons/instagram-text-icon.svg"]');
+const imageChange = document.querySelectorAll('img[src="HOME/icons/instagram-text-icon.svg"]');
 
 
 window.addEventListener('resize', function () {
@@ -137,11 +137,11 @@ window.addEventListener('resize', function () {
   
     imageChange.forEach(element => {
       if (windowWidth < 1266 && windowWidth >768) {
-        element.src = "../Instagram Clone/HOME/icons/icons8-instagram.svg";
+        element.src = "HOME/icons/icons8-instagram.svg";
         element.style.height = "35px"; // Apply new height
         element.style.width = "35px";  // Apply new width
       } else {
-        element.src = "../Instagram Clone/HOME/icons/instagram-text-icon.svg";
+        element.src = "HOME/icons/instagram-text-icon.svg";
         element.style.height = "50px"; // Reset to default
         element.style.width = "100px";  // Reset to default
       }
@@ -156,7 +156,7 @@ window.addEventListener('resize', function () {
   mobileNotification.addEventListener('click', function () {
     const windowWidth = window.innerWidth;
     if (windowWidth < 768) {
-      window.location.href = "../Instagram Clone/notification/index.html";
+      window.location.href = "notification/index.html";
     }
   });
 
@@ -165,7 +165,7 @@ window.addEventListener('resize', function () {
   const profilePicture=document.querySelectorAll('.profile-pic');
   profilePicture.forEach(profile=>{
     profile.addEventListener('click',function(){
-      window.location.href="../Instagram Clone/htmlProfile/profile.html";
+      window.location.href="htmlProfile/profile.html";
     });
   });
   
