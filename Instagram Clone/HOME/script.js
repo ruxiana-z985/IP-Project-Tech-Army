@@ -159,6 +159,15 @@ window.addEventListener('resize', function () {
       window.location.href = "../Instagram Clone/notification/index.html";
     }
   });
+
+
+  //make all profiles take you to a profile page
+  const profilePicture=document.querySelectorAll('.profile-pic');
+  profilePicture.forEach(profile=>{
+    profile.addEventListener('click',function(){
+      window.location.href="../Instagram Clone/htmlProfile/profile.html";
+    });
+  });
   
 
 

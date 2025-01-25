@@ -28,7 +28,9 @@ body {
     background-color:var(--bgColor);
     color:white;
 }
-
+.nav-link{
+  cursor:pointer;
+}
 .profile-container {
     display: flex;
     flex-direction: column;
