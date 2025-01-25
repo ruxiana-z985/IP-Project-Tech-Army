@@ -13,15 +13,32 @@ if (!sessionStorage.getItem('visited')) {
   const searchIcon = document.querySelector('[data-sidebar="search"]');
   
   // Show the dialog when clicking the notification icon
-  notificationIcon.addEventListener('click', (e) => {
-      e.stopPropagation(); // Prevent the click from reaching the document listener
-      notificationDialog.show(); // Show the dialog
-  });
+notificationIcon.addEventListener('click', (e) => {
+  e.stopPropagation();
+  notificationDialog.show();
+
+  // Select the notification button only once
+  const notificationBtn = document.querySelectorAll('.notificationBtn');
+   notificationBtn.forEach(element=>{
+    element.addEventListener('click', function () {
+      if (element.style.backgroundColor === "grey") {
+          element.style.backgroundColor = "blue";
+          element.textContent="Follow";
+      } else {
+          element.style.backgroundColor = "grey";
+          element.textContent="Following"
+      }
+  }); 
+   });
+ 
+  
+});
+
   
   // Show the dialog when clicking the search icon
   searchIcon.addEventListener('click', (e) => {
-      e.stopPropagation(); // Prevent the click from reaching the document listener
-      searchDialog.show(); // Show the dialog
+      e.stopPropagation(); 
+      searchDialog.show(); 
   });
   
   // Close the dialogs when clicking outside of them
@@ -99,7 +116,7 @@ create.forEach(element => {
 });
 
 
-//event is an object passed to function and contains details about what was clicked
+
 document.addEventListener('click', (event) => {
     // Check if the click is outside `.dialog-flex`
     if (!dialogFlex.contains(event.target) && !create.contains(event.target)) {
@@ -112,7 +129,7 @@ dialog_cancel.addEventListener("click", function(){
 
 
 
-const imageChange = document.querySelectorAll('img[src="icons/instagram-text-icon.svg"]');
+const imageChange = document.querySelectorAll('img[src="../Instagram Clone/HOME/icons/instagram-text-icon.svg"]');
 
 
 window.addEventListener('resize', function () {
@@ -120,13 +137,13 @@ window.addEventListener('resize', function () {
   
     imageChange.forEach(element => {
       if (windowWidth < 1266 && windowWidth >768) {
-        element.src = "icons/icons8-instagram.svg";
-        element.style.height = "50px"; // Apply new height
-        element.style.width = "50px";  // Apply new width
+        element.src = "../Instagram Clone/HOME/icons/icons8-instagram.svg";
+        element.style.height = "35px"; // Apply new height
+        element.style.width = "35px";  // Apply new width
       } else {
-        element.src = "icons/instagram-text-icon.svg";
-        element.style.height = ""; // Reset to default
-        element.style.width = "";  // Reset to default
+        element.src = "../Instagram Clone/HOME/icons/instagram-text-icon.svg";
+        element.style.height = "50px"; // Reset to default
+        element.style.width = "100px";  // Reset to default
       }
     });
   });

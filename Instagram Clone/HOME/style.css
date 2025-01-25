@@ -367,6 +367,7 @@ nav.navigation{
   display:none;
   flex-direction:column;
   gap:5%;
+  border:1px solid black;
  }
  dialog[open]{
   display:flex;
@@ -415,9 +416,15 @@ dialog.notification > div > div{
 .notifyMainContent div button{
   max-height:35px;
   border-radius: 15px;
-  background-color: rgb(70, 69, 69);
+  background-color:blue;
   color:white;
   margin-top:15px;
+}
+.notifyMainContent{
+  display:flex;
+  flex-direction: column;
+  gap:15px;
+  
 }
 dialog.search header.search-header {
   display: none; 
@@ -448,7 +455,7 @@ header.search-header{
 
 main.searchMain{
   flex-direction: column;
-  gap:5px;
+  gap:15px;
   padding-left:5px;
   padding-right:5px;
   color: white;
@@ -472,12 +479,19 @@ main.searchMain .recentSearch{
 main.searchMain .mainSearchContent{
    display:flex;
    color: white;
+   gap:15px;
 }
 
 main.searchMain .mainSearchContent > div{
   display: flex;
+  flex-direction: column;
+  line-height: 0;
+  
 
 }
+
+main.searchMain .mainSearchContent > div > p:nth-of-type(2){font-size:0.7rem;}
+
 
  .suggested-profiles{
   display:none;
