@@ -74,3 +74,19 @@ footerIcons.forEach((icon, index) => {
         window.location.href = pages[index];
     });
 });
+
+//change instagram icon for medium sized screen
+const instaIcon=document.querySelector('.iconInsta');
+window.addEventListener('resize', function(){
+    const windowWidth=this.window.innerWidth;
+    if(windowWidth > 769 && windowWidth < 1266){
+        instaIcon.src="assetsProfile/icons/icons8-instagram.svg";
+        instaIcon.style.height="35px";
+        instaIcon.style.width="35px";
+    }
+    else{
+        instaIcon.src="assetsProfile/icons/instagram-text-icon.svg";
+        instaIcon.style.height="70px";
+        instaIcon.style.width="100px";
+    }
+});

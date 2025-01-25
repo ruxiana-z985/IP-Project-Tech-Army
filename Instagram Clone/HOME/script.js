@@ -145,14 +145,7 @@ window.addEventListener('resize', function () {
   
 
 
-  const mobileProfile=document.querySelector('.profIcon');
-  mobileProfile.addEventListener('click',function(){
-    const windowWidth=window.innerWidth;
-    if(windowWidth < 768){
-        window.location.href="../profile.html";
-    }
-  });
-
+  
 
 
  

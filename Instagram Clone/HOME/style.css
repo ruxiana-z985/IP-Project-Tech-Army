@@ -18,25 +18,25 @@ body{
   display:flex;
   flex-direction: column;
 }
-/* Style all scrollbars */
+
 ::-webkit-scrollbar {
-  width: 12px; /* Width of the scrollbar */
+  width: 12px; 
 }
 
-/* Track (background of the scrollbar) */
+
 ::-webkit-scrollbar-track {
-  background: #0e0e0e; /* Light grey background */
+  background: #0e0e0e; /
 }
 
-/* Thumb (scrollable part) */
+
 ::-webkit-scrollbar-thumb {
-  background: #4f4e4ef5; /* Darker grey */
-  border-radius: 6px; /* Rounded corners */
+  background: #4f4e4ef5; 
+  border-radius: 6px; 
 }
 
-/* Thumb hover (scrollable part when hovered) */
+
 ::-webkit-scrollbar-thumb:hover {
-  background: #363535; /* Even darker grey */
+  background: #363535; 
 }
 
 .icons{
