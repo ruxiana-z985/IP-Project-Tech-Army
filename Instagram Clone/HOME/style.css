@@ -519,6 +519,7 @@ main.searchMain .mainSearchContent > div > p:nth-of-type(2){font-size:0.7rem;}
     display:flex;
     justify-content: space-between;
     padding:10px;
+    
   }
   .input-search{
     margin-top: 40px;
@@ -533,6 +534,7 @@ main.searchMain .mainSearchContent > div > p:nth-of-type(2){font-size:0.7rem;}
   footer.footer{
     display:flex;
     justify-content: space-around;
+   
 
   }
 
@@ -586,6 +588,32 @@ main.searchMain .mainSearchContent > div > p:nth-of-type(2){font-size:0.7rem;}
 .post-header > img:hover ~ .hover-profile {
   visibility:hidden; /* Show when hovering */
   opacity: 0; /* Make it fully visible */
+}
+.like-count{
+  display:none;
+}
+header.header{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  height:70px;
+  
+  z-index: 20;
+  background-color: #0e0e0e;
+}
+footer.footer{
+  position:fixed;
+  
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:20;
+  background-color: #0e0e0e;
+}
+
+main.main{
+  margin-top:70px;
 }
 }
 
